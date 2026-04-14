@@ -1,0 +1,10 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+python-multipart==0.0.9
+deepface==0.0.87
+mediapipe==0.10.33
+tensorflow==2.16.1
+numpy==1.26.4
+pillow==10.2.0
+filelock==3.13.1
+pydantic==2.6.1

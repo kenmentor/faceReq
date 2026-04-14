@@ -1,0 +1,1044 @@
+{
+  "attempts": [
+    {
+      "id": "53eb1c0c-767c-40b5-8a81-6e7724683bd2",
+      "timestamp": "2026-04-14T01:50:40.965773",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.5979,
+        "is_match": false,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "6c20715b-dbe1-4917-a569-4e783702846c",
+      "timestamp": "2026-04-14T01:51:46.836636",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.9686,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "54650c9d-519c-4065-bf3a-ecf399561f6c",
+      "timestamp": "2026-04-14T01:52:45.023518",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.5441,
+        "is_match": false,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "6be0a20c-369c-4ef1-915f-c88dc4a1fa20",
+      "timestamp": "2026-04-14T01:54:07.646596",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.9631,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "6731a38f-4d1f-44d6-9494-6ec501672206",
+      "timestamp": "2026-04-14T01:54:35.604760",
+      "result": {
+        "name": "praise",
+        "confidence": 0.955,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "cc599366-9f28-41ee-a04a-cd084b68879e",
+      "timestamp": "2026-04-14T02:13:49.186621",
+      "result": {
+        "name": "mentor2",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "1b465492-a726-4c9e-9d42-2d82ee5a9a6e",
+      "timestamp": "2026-04-14T02:42:33.784081",
+      "result": {
+        "name": "mentor",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "43e5ac04-0a69-48be-b6f8-9eb22aff3cfd",
+      "timestamp": "2026-04-14T02:43:24.552199",
+      "result": {
+        "name": "mavine",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "45622d7f-57e7-4150-8f20-afff050e36d0",
+      "timestamp": "2026-04-14T02:44:03.221995",
+      "result": {
+        "name": "mavine",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "b7c17682-c376-4351-8c02-0c6e460ccc64",
+      "timestamp": "2026-04-14T02:47:11.358439",
+      "result": {
+        "name": "mavine",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "6efc9b4d-d0f7-40d8-be71-f670c57a11f6",
+      "timestamp": "2026-04-14T02:48:54.454583",
+      "result": {
+        "name": "mavine",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "619028b0-e665-4f19-b063-0b667db3f136",
+      "timestamp": "2026-04-14T02:49:24.639991",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.9818,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "c066ecb8-7429-4ece-ae6c-9050f0982fb9",
+      "timestamp": "2026-04-14T02:49:57.010292",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.9095,
+        "is_match": true,
+        "model": "ArcFace"
+      },
+      "model": "ArcFace",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "3d16c9bc-fdbb-4b3f-a80b-6f5a3d864297",
+      "timestamp": "2026-04-14T02:50:19.793357",
+      "result": {
+        "name": "mavine",
+        "confidence": 1.0,
+        "is_match": true,
+        "model": "siamese"
+      },
+      "model": "siamese",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "ffe64623-683f-4cc7-b7a7-35d206b8ee19",
+      "timestamp": "2026-04-14T04:06:52.171662",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.8861,
+        "is_match": true,
+        "model": "ArcFace"
+      },
+      "model": "ArcFace",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "f2badb29-d823-421f-a085-2e0156f65451",
+      "timestamp": "2026-04-14T04:07:19.884248",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.8803,
+        "is_match": true,
+        "model": "ArcFace"
+      },
+      "model": "ArcFace",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "a1d64da4-0ede-4d02-ba10-d206edb19722",
+      "timestamp": "2026-04-14T04:14:38.281330",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9919,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.85
+    },
+    {
+      "id": "548fa537-b877-47c0-b85d-46b1a38f20c4",
+      "timestamp": "2026-04-14T04:15:20.782323",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9914,
+        "is_match": false,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 1.0
+    },
+    {
+      "id": "baa8a3e2-f5cf-4ab5-bf9c-4e702b3e8b51",
+      "timestamp": "2026-04-14T04:15:35.651342",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9591,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.8
+    },
+    {
+      "id": "74b2258c-a5d8-4b06-a39c-c40fd52e2fa9",
+      "timestamp": "2026-04-14T04:17:40.993393",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9591,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.8
+    },
+    {
+      "id": "bc7e60b2-cd44-49cf-a8f4-a50f510e39db",
+      "timestamp": "2026-04-14T04:18:22.902955",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9573,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.8
+    },
+    {
+      "id": "8b6b59f4-b717-448a-a7c8-085602eca668",
+      "timestamp": "2026-04-14T04:20:05.563502",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9597,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "b60309bc-b90e-4637-8965-f1f38dbcf7d1",
+      "timestamp": "2026-04-14T04:26:59.451785",
+      "result": {
+        "name": "mavine",
+        "confidence": 0.9834,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "cf353b8c-7246-4d7e-9630-187a05e8e860",
+      "timestamp": "2026-04-14T04:37:30.782570",
+      "result": {
+        "name": "mentor",
+        "confidence": 0.952,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "fddd4de4-376a-4a30-8a3d-cf3b852b6ed7",
+      "timestamp": "2026-04-14T06:46:49.805741",
+      "result": {
+        "name": "mVINE ",
+        "confidence": 0.9998,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "5ed3051f-dbe6-4026-9147-4a4f0c090ffc",
+      "timestamp": "2026-04-14T06:49:06.443943",
+      "result": {
+        "name": "mVINE ",
+        "confidence": 0.9987,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "20db54a5-8bce-423b-b548-deb25b8bd24e",
+      "timestamp": "2026-04-14T06:49:34.047636",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9872,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "440a6547-676e-478a-a984-ce559a54e785",
+      "timestamp": "2026-04-14T06:50:00.661094",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.0883,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "fab3dbc2-56d7-4400-84b1-f5ab2b1b7645",
+      "timestamp": "2026-04-14T06:56:36.454110",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.956,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "9c7903e0-f2a0-45bb-a004-05dbf2c404e5",
+      "timestamp": "2026-04-14T07:00:17.916847",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.9341,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "7a16cdc4-30e2-4069-9053-ae9478f9ef45",
+      "timestamp": "2026-04-14T07:00:43.704129",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9981,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "8958a053-502d-4ea0-bf7d-79dbb035c4e7",
+      "timestamp": "2026-04-14T07:00:59.042951",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9876,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "f55f88ac-8af0-414f-b74d-f53e2a6b8c1b",
+      "timestamp": "2026-04-14T07:02:08.659614",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9523,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "93157027-a012-4727-9340-8e4481c51e13",
+      "timestamp": "2026-04-14T07:05:26.458803",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.4029,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "4daa2110-7be9-4b59-a264-49a15db8b67f",
+      "timestamp": "2026-04-14T07:07:04.909703",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.9989,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "5a76a526-8ef4-445a-a50f-5b3219823b9b",
+      "timestamp": "2026-04-14T07:08:47.648588",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9842,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "3a9dcff3-d1eb-4b41-b691-c535f1d25108",
+      "timestamp": "2026-04-14T07:23:17.309062",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9699,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "f9d08e79-30db-4d51-95b2-ed82e04dc034",
+      "timestamp": "2026-04-14T07:29:51.751731",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.958,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "2f1b68d4-3590-40d0-b9f2-98b081d071bf",
+      "timestamp": "2026-04-14T07:30:12.721029",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.8809,
+        "is_match": true,
+        "model": "ArcFace"
+      },
+      "model": "ArcFace",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "ea982256-e594-466d-85b9-bcdc344a95c0",
+      "timestamp": "2026-04-14T07:31:28.040891",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.9715,
+        "is_match": true,
+        "model": "ArcFace"
+      },
+      "model": "ArcFace",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "6930a5b3-a0d0-4c28-82bc-453f6adc957b",
+      "timestamp": "2026-04-14T07:31:46.034026",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.9883,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "24440ea7-7534-4ead-a361-e68c5ea7adbe",
+      "timestamp": "2026-04-14T07:34:15.187635",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.1102,
+        "is_match": false,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "d9178cb4-7230-4a7d-874e-90aba3d99ce0",
+      "timestamp": "2026-04-14T07:45:12.357104",
+      "result": {
+        "name": "cage ",
+        "confidence": 0.9389,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "7208169d-6a4a-4774-a42f-0ff020be20cc",
+      "timestamp": "2026-04-14T07:48:02.173488",
+      "result": {
+        "name": "tom",
+        "confidence": 0.8223,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "b12eb096-e286-41fc-a98a-45fa27308de3",
+      "timestamp": "2026-04-14T07:49:47.046963",
+      "result": {
+        "name": "cage ",
+        "confidence": 0.8766,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "95ff16e4-192f-48a7-a6ac-1fc5de050854",
+      "timestamp": "2026-04-14T07:50:16.690788",
+      "result": {
+        "name": "tom",
+        "confidence": 0.9543,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "9e817ef7-56d4-4005-8858-bfdab5813786",
+      "timestamp": "2026-04-14T07:50:29.729014",
+      "result": {
+        "name": "tom",
+        "confidence": 0.9543,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "eba12ccd-1267-4a60-90fb-e1a5148ecadc",
+      "timestamp": "2026-04-14T07:50:45.352500",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.79,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "a6f2c4d8-cf1a-4dff-9ebd-d2901f71ce8a",
+      "timestamp": "2026-04-14T07:51:06.916716",
+      "result": {
+        "name": "MENTOR",
+        "confidence": 0.9069,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "e2ab286e-a239-4dce-b1aa-bedfaa274fb6",
+      "timestamp": "2026-04-14T07:57:25.857837",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.2097,
+        "is_match": false,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "a8a60266-fd14-418e-9d4d-6134731ae093",
+      "timestamp": "2026-04-14T07:58:44.576294",
+      "result": {
+        "name": "ebuka",
+        "confidence": 0.8398,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "012a05f4-0d18-4a73-8eee-6947e87bf839",
+      "timestamp": "2026-04-14T07:59:01.938349",
+      "result": {
+        "name": "tom",
+        "confidence": 0.8448,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "680fd000-3c78-423e-9840-a678ac50bc9f",
+      "timestamp": "2026-04-14T07:59:13.882206",
+      "result": {
+        "name": "tom",
+        "confidence": 0.8448,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "ad436777-7a22-4784-8666-8e3b427b04e3",
+      "timestamp": "2026-04-14T07:59:25.653537",
+      "result": {
+        "name": "tom",
+        "confidence": 0.8939,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "1ad84b17-6a84-43b9-9d20-e1fe54e813f4",
+      "timestamp": "2026-04-14T07:59:49.398394",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.9377,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "c8ce7686-097e-4c7a-ac18-7f17d0bc5313",
+      "timestamp": "2026-04-14T08:12:30.218978",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "09404c1f-d448-4aaf-9f8a-68cd77be116f",
+      "timestamp": "2026-04-14T08:12:44.019868",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "080b1895-3506-4e3e-9b87-af4a11b45354",
+      "timestamp": "2026-04-14T08:13:07.118224",
+      "result": {
+        "name": "cage ",
+        "confidence": 0.9389,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "f5024642-e677-4975-b6ee-c41d846be4bd",
+      "timestamp": "2026-04-14T08:17:18.118232",
+      "result": {
+        "name": "cage ",
+        "confidence": 0.9389,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "176ebd36-2a3b-416c-be13-f077df71953c",
+      "timestamp": "2026-04-14T08:17:34.060927",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "f8f6fd92-d7e2-4c32-b290-6f87f7c8ed88",
+      "timestamp": "2026-04-14T08:21:52.901861",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "6df02990-e5e7-4301-bfb3-6c67f123cd16",
+      "timestamp": "2026-04-14T08:22:04.281485",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "1a94d208-d4d6-4241-9df3-ebfb7c8b393f",
+      "timestamp": "2026-04-14T08:24:08.559938",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "c7a82f85-c856-483a-8aa7-a254435abb86",
+      "timestamp": "2026-04-14T08:30:25.140928",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "21d5b89a-1968-457d-9462-93f8c64b6975",
+      "timestamp": "2026-04-14T08:33:38.200166",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "67cf53f3-b491-464c-8dcb-1c386cb6417b",
+      "timestamp": "2026-04-14T08:34:53.502974",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.062,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "ea3f9cab-855e-47fc-be05-b65a0df2444b",
+      "timestamp": "2026-04-14T08:35:11.047561",
+      "result": {
+        "name": "cage ",
+        "confidence": 0.9389,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "aa6d1b64-86fb-46e2-9c12-afe2cbed8443",
+      "timestamp": "2026-04-14T08:35:25.641348",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "e082c02a-06dc-4474-a5c5-c68eb6799027",
+      "timestamp": "2026-04-14T08:35:36.908074",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.1176,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "080c0b4c-ff34-495b-bc1a-c234b6aa989f",
+      "timestamp": "2026-04-14T08:35:53.270111",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "f212ad59-a28a-4f8f-adc8-2ada8870709e",
+      "timestamp": "2026-04-14T08:37:18.372567",
+      "result": {
+        "name": "MAVINE",
+        "confidence": 0.0722,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "01d411f3-54e2-4136-9f2b-e3a946cd1abe",
+      "timestamp": "2026-04-14T08:40:13.285506",
+      "result": {
+        "name": "ebuka",
+        "confidence": 0.9257,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "98bf2eca-5ed2-458d-a9fd-dafd1729abad",
+      "timestamp": "2026-04-14T08:42:34.265105",
+      "result": {
+        "name": "cage",
+        "confidence": 0.8838,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "c1e529dc-8e5c-4ca9-8f09-ec143026bf78",
+      "timestamp": "2026-04-14T08:42:49.572446",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "0a3f90a5-6716-4d7d-9f3a-597d98662451",
+      "timestamp": "2026-04-14T08:45:37.459075",
+      "result": {
+        "name": "cage",
+        "confidence": 0.8838,
+        "is_match": true,
+        "model": "Facenet"
+      },
+      "model": "Facenet",
+      "input_method": "upload",
+      "threshold": 0.45
+    },
+    {
+      "id": "079132c0-f36f-4504-a167-926f7ce189da",
+      "timestamp": "2026-04-14T09:02:32.105137",
+      "result": {
+        "name": "cage",
+        "confidence": 0.9401,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "af7fcd19-8e12-4fa0-8f93-9b4e0c6b5d90",
+      "timestamp": "2026-04-14T09:03:11.649560",
+      "result": {
+        "name": "cage",
+        "confidence": 0.8886,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "777140ca-426a-4c5a-9734-e47c8e15f48f",
+      "timestamp": "2026-04-14T09:09:11.907522",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "fb6ed72f-0869-4072-b0d0-4ec7414ff05a",
+      "timestamp": "2026-04-14T09:18:28.294097",
+      "result": {
+        "name": "holland ",
+        "confidence": 0.8295,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    },
+    {
+      "id": "de3e4a50-82f1-4595-8348-d5483728bb8a",
+      "timestamp": "2026-04-14T09:18:58.913174",
+      "result": {
+        "name": "cage",
+        "confidence": 0.9168,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
+    }
+  ]
+}
