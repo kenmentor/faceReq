@@ -1,1293 +1,412 @@
 {
   "attempts": [
     {
-      "id": "53eb1c0c-767c-40b5-8a81-6e7724683bd2",
-      "timestamp": "2026-04-14T01:50:40.965773",
+      "id": "a9a06b55-af94-495c-9ca9-4ae782cfd8eb",
+      "timestamp": "2026-04-14T23:56:23.800931",
       "result": {
-        "name": "mentor",
-        "confidence": 0.5979,
+        "name": "tom",
+        "confidence": 0.8698,
+        "is_match": true,
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.4041,
+          "face_detection_ms": 0.0128,
+          "embedding_extraction_ms": 0.3893,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Arcface",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "31eadce3-6b30-4d5f-b14e-11b76c168c63",
+      "timestamp": "2026-04-14T23:56:34.156586",
+      "result": {
+        "name": "man",
+        "confidence": 0.7134,
         "is_match": false,
-        "model": "Facenet"
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.3787,
+          "face_detection_ms": 0.0134,
+          "embedding_extraction_ms": 0.3633,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
       },
-      "model": "Facenet",
+      "model": "Arcface",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "6c20715b-dbe1-4917-a569-4e783702846c",
-      "timestamp": "2026-04-14T01:51:46.836636",
+      "id": "4379205a-4c40-4fe6-852d-40ba1da7fe39",
+      "timestamp": "2026-04-14T23:56:47.015455",
       "result": {
-        "name": "mentor",
-        "confidence": 0.9686,
+        "name": "tom",
+        "confidence": 0.8854,
         "is_match": true,
-        "model": "Facenet"
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.403,
+          "face_detection_ms": 0.0065,
+          "embedding_extraction_ms": 0.3934,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
       },
-      "model": "Facenet",
+      "model": "Arcface",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "54650c9d-519c-4065-bf3a-ecf399561f6c",
-      "timestamp": "2026-04-14T01:52:45.023518",
+      "id": "9d589f56-1812-4275-94a2-425dd5630802",
+      "timestamp": "2026-04-14T23:56:59.895222",
       "result": {
-        "name": "mentor",
-        "confidence": 0.5441,
+        "name": "man",
+        "confidence": 0.8849,
+        "is_match": true,
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.4005,
+          "face_detection_ms": 0.0122,
+          "embedding_extraction_ms": 0.3853,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Arcface",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "1a136111-d2b8-4917-ae9f-fbea37a8460d",
+      "timestamp": "2026-04-14T23:57:58.795216",
+      "result": {
+        "name": "tom",
+        "confidence": 0.8865,
+        "is_match": true,
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.387,
+          "face_detection_ms": 0.005,
+          "embedding_extraction_ms": 0.378,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "093c4a9f-e484-44ce-8998-bde98570b32d",
+      "timestamp": "2026-04-14T23:59:04.716571",
+      "result": {
+        "name": "man",
+        "confidence": 0.2916,
         "is_match": false,
-        "model": "Facenet"
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.4498,
+          "face_detection_ms": 0.013,
+          "embedding_extraction_ms": 0.4348,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "6b5b8e3f-df17-411c-8988-f65d590d61b2",
+      "timestamp": "2026-04-14T23:59:16.820325",
+      "result": {
+        "name": "man",
+        "confidence": 0.2916,
+        "is_match": false,
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.3959,
+          "face_detection_ms": 0.008,
+          "embedding_extraction_ms": 0.3849,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Arcface",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "3266fed4-af51-4d43-8923-08f8dfda038d",
+      "timestamp": "2026-04-14T23:59:37.664221",
+      "result": {
+        "name": "man",
+        "confidence": 0.2916,
+        "is_match": false,
+        "model": "Facenet",
+        "timing": {
+          "total_ms": 0.3918,
+          "face_detection_ms": 0.008,
+          "embedding_extraction_ms": 0.3818,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
       },
       "model": "Facenet",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "6be0a20c-369c-4ef1-915f-c88dc4a1fa20",
-      "timestamp": "2026-04-14T01:54:07.646596",
+      "id": "0616095f-84bb-499e-84f5-714cfc9b8824",
+      "timestamp": "2026-04-14T23:59:56.507834",
       "result": {
-        "name": "mentor",
-        "confidence": 0.9631,
+        "name": "tom",
+        "confidence": 0.9006,
         "is_match": true,
-        "model": "Facenet"
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.401,
+          "face_detection_ms": 0.0179,
+          "embedding_extraction_ms": 0.3792,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "5d45b20d-3781-4c79-b47e-619dacefeef2",
+      "timestamp": "2026-04-15T00:00:10.637735",
+      "result": {
+        "name": "man",
+        "confidence": 0.7134,
+        "is_match": false,
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.3727,
+          "face_detection_ms": 0.0147,
+          "embedding_extraction_ms": 0.355,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "cdd75128-790a-4ab8-8054-8affb642bb47",
+      "timestamp": "2026-04-15T00:00:27.077958",
+      "result": {
+        "name": "man",
+        "confidence": 0.7134,
+        "is_match": false,
+        "model": "Arcface",
+        "timing": {
+          "total_ms": 0.3811,
+          "face_detection_ms": 0.011,
+          "embedding_extraction_ms": 0.3681,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
+      },
+      "model": "Arcface",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "92591581-5d69-4124-b2d2-be596174da44",
+      "timestamp": "2026-04-15T00:00:38.733864",
+      "result": {
+        "name": "man",
+        "confidence": 0.7134,
+        "is_match": false,
+        "model": "Facenet",
+        "timing": {
+          "total_ms": 0.3948,
+          "face_detection_ms": 0.013,
+          "embedding_extraction_ms": 0.3778,
+          "matching_ms": 0.0009
+        },
+        "face_detected": true,
+        "enrolled_users_count": 3,
+        "threshold_used": 0.75
       },
       "model": "Facenet",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "6731a38f-4d1f-44d6-9494-6ec501672206",
-      "timestamp": "2026-04-14T01:54:35.604760",
+      "id": "1741aaa6-2acc-4fcd-ad8c-e5d26b9d7213",
+      "timestamp": "2026-04-15T00:03:32.461597",
       "result": {
-        "name": "praise",
-        "confidence": 0.955,
+        "name": "mentor",
+        "confidence": 0.9886,
         "is_match": true,
-        "model": "Facenet"
+        "model": "Facenet",
+        "timing": {
+          "total_ms": 0.87,
+          "face_detection_ms": 0.0654,
+          "embedding_extraction_ms": 0.7956,
+          "matching_ms": 0.001
+        },
+        "face_detected": true,
+        "enrolled_users_count": 4,
+        "threshold_used": 0.75
       },
       "model": "Facenet",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "cc599366-9f28-41ee-a04a-cd084b68879e",
-      "timestamp": "2026-04-14T02:13:49.186621",
-      "result": {
-        "name": "mentor2",
-        "confidence": 1.0,
-        "is_match": true,
-        "model": "siamese"
-      },
-      "model": "siamese",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "1b465492-a726-4c9e-9d42-2d82ee5a9a6e",
-      "timestamp": "2026-04-14T02:42:33.784081",
+      "id": "699a00f2-655b-48cb-9fdb-43d2a7e89977",
+      "timestamp": "2026-04-15T00:03:51.863353",
       "result": {
         "name": "mentor",
-        "confidence": 1.0,
+        "confidence": 0.9787,
         "is_match": true,
-        "model": "siamese"
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.9364,
+          "face_detection_ms": 0.0486,
+          "embedding_extraction_ms": 0.8767,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 4,
+        "threshold_used": 0.75
       },
-      "model": "siamese",
+      "model": "Siamese",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "43e5ac04-0a69-48be-b6f8-9eb22aff3cfd",
-      "timestamp": "2026-04-14T02:43:24.552199",
+      "id": "6edea76e-c876-4889-b9b7-541128c2d1a8",
+      "timestamp": "2026-04-15T00:04:05.777337",
       "result": {
         "name": "mavine",
-        "confidence": 1.0,
-        "is_match": true,
-        "model": "siamese"
+        "confidence": 0.6543,
+        "is_match": false,
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.8838,
+          "face_detection_ms": 0.0519,
+          "embedding_extraction_ms": 0.8214,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 4,
+        "threshold_used": 0.75
       },
-      "model": "siamese",
+      "model": "Siamese",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "45622d7f-57e7-4150-8f20-afff050e36d0",
-      "timestamp": "2026-04-14T02:44:03.221995",
+      "id": "ecab3bae-7049-4d03-8096-6fe4017fe390",
+      "timestamp": "2026-04-15T00:05:49.712517",
       "result": {
-        "name": "mavine",
-        "confidence": 1.0,
+        "name": "man",
+        "confidence": 0.8849,
         "is_match": true,
-        "model": "siamese"
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.9376,
+          "face_detection_ms": 0.0278,
+          "embedding_extraction_ms": 0.9038,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 4,
+        "threshold_used": 0.75
       },
-      "model": "siamese",
+      "model": "Siamese",
       "input_method": "upload",
-      "threshold": 0.85
+      "threshold": 0.75
     },
     {
-      "id": "b7c17682-c376-4351-8c02-0c6e460ccc64",
-      "timestamp": "2026-04-14T02:47:11.358439",
-      "result": {
-        "name": "mavine",
-        "confidence": 1.0,
-        "is_match": true,
-        "model": "siamese"
-      },
-      "model": "siamese",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "6efc9b4d-d0f7-40d8-be71-f670c57a11f6",
-      "timestamp": "2026-04-14T02:48:54.454583",
-      "result": {
-        "name": "mavine",
-        "confidence": 1.0,
-        "is_match": true,
-        "model": "siamese"
-      },
-      "model": "siamese",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "619028b0-e665-4f19-b063-0b667db3f136",
-      "timestamp": "2026-04-14T02:49:24.639991",
-      "result": {
-        "name": "mentor",
-        "confidence": 0.9818,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "c066ecb8-7429-4ece-ae6c-9050f0982fb9",
-      "timestamp": "2026-04-14T02:49:57.010292",
-      "result": {
-        "name": "mentor",
-        "confidence": 0.9095,
-        "is_match": true,
-        "model": "ArcFace"
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "3d16c9bc-fdbb-4b3f-a80b-6f5a3d864297",
-      "timestamp": "2026-04-14T02:50:19.793357",
-      "result": {
-        "name": "mavine",
-        "confidence": 1.0,
-        "is_match": true,
-        "model": "siamese"
-      },
-      "model": "siamese",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "ffe64623-683f-4cc7-b7a7-35d206b8ee19",
-      "timestamp": "2026-04-14T04:06:52.171662",
-      "result": {
-        "name": "mentor",
-        "confidence": 0.8861,
-        "is_match": true,
-        "model": "ArcFace"
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "f2badb29-d823-421f-a085-2e0156f65451",
-      "timestamp": "2026-04-14T04:07:19.884248",
-      "result": {
-        "name": "mentor",
-        "confidence": 0.8803,
-        "is_match": true,
-        "model": "ArcFace"
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "a1d64da4-0ede-4d02-ba10-d206edb19722",
-      "timestamp": "2026-04-14T04:14:38.281330",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9919,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.85
-    },
-    {
-      "id": "548fa537-b877-47c0-b85d-46b1a38f20c4",
-      "timestamp": "2026-04-14T04:15:20.782323",
+      "id": "42070f35-4031-43e8-a5a1-3c0cd5589e84",
+      "timestamp": "2026-04-15T00:06:42.088797",
       "result": {
         "name": "mavine",
         "confidence": 0.9914,
-        "is_match": false,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 1.0
-    },
-    {
-      "id": "baa8a3e2-f5cf-4ab5-bf9c-4e702b3e8b51",
-      "timestamp": "2026-04-14T04:15:35.651342",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9591,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.8
-    },
-    {
-      "id": "74b2258c-a5d8-4b06-a39c-c40fd52e2fa9",
-      "timestamp": "2026-04-14T04:17:40.993393",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9591,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.8
-    },
-    {
-      "id": "bc7e60b2-cd44-49cf-a8f4-a50f510e39db",
-      "timestamp": "2026-04-14T04:18:22.902955",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9573,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.8
-    },
-    {
-      "id": "8b6b59f4-b717-448a-a7c8-085602eca668",
-      "timestamp": "2026-04-14T04:20:05.563502",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9597,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "b60309bc-b90e-4637-8965-f1f38dbcf7d1",
-      "timestamp": "2026-04-14T04:26:59.451785",
-      "result": {
-        "name": "mavine",
-        "confidence": 0.9834,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "cf353b8c-7246-4d7e-9630-187a05e8e860",
-      "timestamp": "2026-04-14T04:37:30.782570",
-      "result": {
-        "name": "mentor",
-        "confidence": 0.952,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "fddd4de4-376a-4a30-8a3d-cf3b852b6ed7",
-      "timestamp": "2026-04-14T06:46:49.805741",
-      "result": {
-        "name": "mVINE ",
-        "confidence": 0.9998,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "5ed3051f-dbe6-4026-9147-4a4f0c090ffc",
-      "timestamp": "2026-04-14T06:49:06.443943",
-      "result": {
-        "name": "mVINE ",
-        "confidence": 0.9987,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "20db54a5-8bce-423b-b548-deb25b8bd24e",
-      "timestamp": "2026-04-14T06:49:34.047636",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9872,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "440a6547-676e-478a-a984-ce559a54e785",
-      "timestamp": "2026-04-14T06:50:00.661094",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.0883,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "fab3dbc2-56d7-4400-84b1-f5ab2b1b7645",
-      "timestamp": "2026-04-14T06:56:36.454110",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.956,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "9c7903e0-f2a0-45bb-a004-05dbf2c404e5",
-      "timestamp": "2026-04-14T07:00:17.916847",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.9341,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "7a16cdc4-30e2-4069-9053-ae9478f9ef45",
-      "timestamp": "2026-04-14T07:00:43.704129",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9981,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "8958a053-502d-4ea0-bf7d-79dbb035c4e7",
-      "timestamp": "2026-04-14T07:00:59.042951",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9876,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "f55f88ac-8af0-414f-b74d-f53e2a6b8c1b",
-      "timestamp": "2026-04-14T07:02:08.659614",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9523,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "93157027-a012-4727-9340-8e4481c51e13",
-      "timestamp": "2026-04-14T07:05:26.458803",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.4029,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "4daa2110-7be9-4b59-a264-49a15db8b67f",
-      "timestamp": "2026-04-14T07:07:04.909703",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.9989,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "5a76a526-8ef4-445a-a50f-5b3219823b9b",
-      "timestamp": "2026-04-14T07:08:47.648588",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9842,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "3a9dcff3-d1eb-4b41-b691-c535f1d25108",
-      "timestamp": "2026-04-14T07:23:17.309062",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9699,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "f9d08e79-30db-4d51-95b2-ed82e04dc034",
-      "timestamp": "2026-04-14T07:29:51.751731",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.958,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "2f1b68d4-3590-40d0-b9f2-98b081d071bf",
-      "timestamp": "2026-04-14T07:30:12.721029",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.8809,
-        "is_match": true,
-        "model": "ArcFace"
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "ea982256-e594-466d-85b9-bcdc344a95c0",
-      "timestamp": "2026-04-14T07:31:28.040891",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.9715,
-        "is_match": true,
-        "model": "ArcFace"
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "6930a5b3-a0d0-4c28-82bc-453f6adc957b",
-      "timestamp": "2026-04-14T07:31:46.034026",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.9883,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "24440ea7-7534-4ead-a361-e68c5ea7adbe",
-      "timestamp": "2026-04-14T07:34:15.187635",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.1102,
-        "is_match": false,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "d9178cb4-7230-4a7d-874e-90aba3d99ce0",
-      "timestamp": "2026-04-14T07:45:12.357104",
-      "result": {
-        "name": "cage ",
-        "confidence": 0.9389,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "7208169d-6a4a-4774-a42f-0ff020be20cc",
-      "timestamp": "2026-04-14T07:48:02.173488",
-      "result": {
-        "name": "tom",
-        "confidence": 0.8223,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "b12eb096-e286-41fc-a98a-45fa27308de3",
-      "timestamp": "2026-04-14T07:49:47.046963",
-      "result": {
-        "name": "cage ",
-        "confidence": 0.8766,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "95ff16e4-192f-48a7-a6ac-1fc5de050854",
-      "timestamp": "2026-04-14T07:50:16.690788",
-      "result": {
-        "name": "tom",
-        "confidence": 0.9543,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "9e817ef7-56d4-4005-8858-bfdab5813786",
-      "timestamp": "2026-04-14T07:50:29.729014",
-      "result": {
-        "name": "tom",
-        "confidence": 0.9543,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "eba12ccd-1267-4a60-90fb-e1a5148ecadc",
-      "timestamp": "2026-04-14T07:50:45.352500",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.79,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "a6f2c4d8-cf1a-4dff-9ebd-d2901f71ce8a",
-      "timestamp": "2026-04-14T07:51:06.916716",
-      "result": {
-        "name": "MENTOR",
-        "confidence": 0.9069,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "e2ab286e-a239-4dce-b1aa-bedfaa274fb6",
-      "timestamp": "2026-04-14T07:57:25.857837",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.2097,
-        "is_match": false,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "a8a60266-fd14-418e-9d4d-6134731ae093",
-      "timestamp": "2026-04-14T07:58:44.576294",
-      "result": {
-        "name": "ebuka",
-        "confidence": 0.8398,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "012a05f4-0d18-4a73-8eee-6947e87bf839",
-      "timestamp": "2026-04-14T07:59:01.938349",
-      "result": {
-        "name": "tom",
-        "confidence": 0.8448,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "680fd000-3c78-423e-9840-a678ac50bc9f",
-      "timestamp": "2026-04-14T07:59:13.882206",
-      "result": {
-        "name": "tom",
-        "confidence": 0.8448,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "ad436777-7a22-4784-8666-8e3b427b04e3",
-      "timestamp": "2026-04-14T07:59:25.653537",
-      "result": {
-        "name": "tom",
-        "confidence": 0.8939,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "1ad84b17-6a84-43b9-9d20-e1fe54e813f4",
-      "timestamp": "2026-04-14T07:59:49.398394",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.9377,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "c8ce7686-097e-4c7a-ac18-7f17d0bc5313",
-      "timestamp": "2026-04-14T08:12:30.218978",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "09404c1f-d448-4aaf-9f8a-68cd77be116f",
-      "timestamp": "2026-04-14T08:12:44.019868",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "080b1895-3506-4e3e-9b87-af4a11b45354",
-      "timestamp": "2026-04-14T08:13:07.118224",
-      "result": {
-        "name": "cage ",
-        "confidence": 0.9389,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "f5024642-e677-4975-b6ee-c41d846be4bd",
-      "timestamp": "2026-04-14T08:17:18.118232",
-      "result": {
-        "name": "cage ",
-        "confidence": 0.9389,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "176ebd36-2a3b-416c-be13-f077df71953c",
-      "timestamp": "2026-04-14T08:17:34.060927",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "f8f6fd92-d7e2-4c32-b290-6f87f7c8ed88",
-      "timestamp": "2026-04-14T08:21:52.901861",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "6df02990-e5e7-4301-bfb3-6c67f123cd16",
-      "timestamp": "2026-04-14T08:22:04.281485",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "1a94d208-d4d6-4241-9df3-ebfb7c8b393f",
-      "timestamp": "2026-04-14T08:24:08.559938",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "c7a82f85-c856-483a-8aa7-a254435abb86",
-      "timestamp": "2026-04-14T08:30:25.140928",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "21d5b89a-1968-457d-9462-93f8c64b6975",
-      "timestamp": "2026-04-14T08:33:38.200166",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "67cf53f3-b491-464c-8dcb-1c386cb6417b",
-      "timestamp": "2026-04-14T08:34:53.502974",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.062,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "ea3f9cab-855e-47fc-be05-b65a0df2444b",
-      "timestamp": "2026-04-14T08:35:11.047561",
-      "result": {
-        "name": "cage ",
-        "confidence": 0.9389,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "aa6d1b64-86fb-46e2-9c12-afe2cbed8443",
-      "timestamp": "2026-04-14T08:35:25.641348",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "e082c02a-06dc-4474-a5c5-c68eb6799027",
-      "timestamp": "2026-04-14T08:35:36.908074",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.1176,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "080c0b4c-ff34-495b-bc1a-c234b6aa989f",
-      "timestamp": "2026-04-14T08:35:53.270111",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "f212ad59-a28a-4f8f-adc8-2ada8870709e",
-      "timestamp": "2026-04-14T08:37:18.372567",
-      "result": {
-        "name": "MAVINE",
-        "confidence": 0.0722,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "01d411f3-54e2-4136-9f2b-e3a946cd1abe",
-      "timestamp": "2026-04-14T08:40:13.285506",
-      "result": {
-        "name": "ebuka",
-        "confidence": 0.9257,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "98bf2eca-5ed2-458d-a9fd-dafd1729abad",
-      "timestamp": "2026-04-14T08:42:34.265105",
-      "result": {
-        "name": "cage",
-        "confidence": 0.8838,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "c1e529dc-8e5c-4ca9-8f09-ec143026bf78",
-      "timestamp": "2026-04-14T08:42:49.572446",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "0a3f90a5-6716-4d7d-9f3a-597d98662451",
-      "timestamp": "2026-04-14T08:45:37.459075",
-      "result": {
-        "name": "cage",
-        "confidence": 0.8838,
-        "is_match": true,
-        "model": "Facenet"
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.45
-    },
-    {
-      "id": "079132c0-f36f-4504-a167-926f7ce189da",
-      "timestamp": "2026-04-14T09:02:32.105137",
-      "result": {
-        "name": "cage",
-        "confidence": 0.9401,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "af7fcd19-8e12-4fa0-8f93-9b4e0c6b5d90",
-      "timestamp": "2026-04-14T09:03:11.649560",
-      "result": {
-        "name": "cage",
-        "confidence": 0.8886,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "777140ca-426a-4c5a-9734-e47c8e15f48f",
-      "timestamp": "2026-04-14T09:09:11.907522",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "fb6ed72f-0869-4072-b0d0-4ec7414ff05a",
-      "timestamp": "2026-04-14T09:18:28.294097",
-      "result": {
-        "name": "holland ",
-        "confidence": 0.8295,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "de3e4a50-82f1-4595-8348-d5483728bb8a",
-      "timestamp": "2026-04-14T09:18:58.913174",
-      "result": {
-        "name": "cage",
-        "confidence": 0.9168,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "ce2c2283-29c7-43ce-9c7e-48f596978070",
-      "timestamp": "2026-04-14T09:20:54.320586",
-      "result": {
-        "name": "mavine ",
-        "confidence": 0.9171,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "d70599ed-4063-4108-9925-b22a01ac116d",
-      "timestamp": "2026-04-14T21:18:59.551092",
-      "result": {
-        "name": "mavine ",
-        "confidence": 0.9794,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "18fe25f8-9815-4970-8509-194ee49fb8f0",
-      "timestamp": "2026-04-14T22:03:38.988170",
-      "result": {
-        "name": "mavine ",
-        "confidence": 0.9768,
-        "is_match": true,
-        "model": "Siamese"
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "36fb17fc-1185-4f52-9924-8c37b547688a",
-      "timestamp": "2026-04-14T22:07:33.798618",
-      "result": {
-        "name": "hh",
-        "confidence": 0.9817,
         "is_match": true,
         "model": "Siamese",
         "timing": {
-          "total_ms": 4.4374,
-          "face_detection_ms": 0.4525,
-          "embedding_extraction_ms": 3.9581,
+          "total_ms": 0.8685,
+          "face_detection_ms": 0.0489,
+          "embedding_extraction_ms": 0.8086,
           "matching_ms": 0.0
         },
         "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.65
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "5a24f5d0-e0a3-4817-bdc8-5187618c6302",
-      "timestamp": "2026-04-14T22:10:22.381710",
-      "result": {
-        "name": "hh",
-        "confidence": 0.9817,
-        "is_match": true,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.615,
-          "face_detection_ms": 0.019,
-          "embedding_extraction_ms": 0.589,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.65
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.65
-    },
-    {
-      "id": "962dd6b4-8762-43ce-9b87-9dee2417462c",
-      "timestamp": "2026-04-14T22:11:58.062009",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.019,
-          "face_detection_ms": 0.017,
-          "embedding_extraction_ms": 0,
-          "matching_ms": 0
-        },
-        "face_detected": false,
-        "enrolled_users_count": 0,
+        "enrolled_users_count": 4,
         "threshold_used": 0.75
       },
-      "model": "Facenet",
+      "model": "Siamese",
       "input_method": "upload",
       "threshold": 0.75
     },
     {
-      "id": "904a24aa-ca62-436b-888b-26db9f6f4087",
-      "timestamp": "2026-04-14T22:20:59.540880",
+      "id": "8a495dc3-a781-4639-83e0-7ba87ac811ca",
+      "timestamp": "2026-04-15T00:07:10.788942",
       "result": {
-        "name": "face1",
-        "confidence": 0.976,
-        "is_match": true,
-        "model": "ArcFace",
-        "timing": {
-          "total_ms": 2.7841,
-          "face_detection_ms": 0.3461,
-          "embedding_extraction_ms": 2.425,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "ArcFace",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "9362060f-d7b6-48ce-ad65-808b8ca1c8b5",
-      "timestamp": "2026-04-14T22:35:37.441283",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
+        "name": "tom",
+        "confidence": 0.0895,
         "is_match": false,
         "model": "Siamese",
         "timing": {
-          "total_ms": 0.8987,
-          "face_detection_ms": 0.022,
-          "embedding_extraction_ms": 0.8697,
-          "matching_ms": 0.001
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "09a74c09-79b2-4235-9c91-8ae4cd340291",
-      "timestamp": "2026-04-14T22:38:31.151645",
-      "result": {
-        "name": "hh",
-        "confidence": 0.9817,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 3.5721,
-          "face_detection_ms": 0.022,
-          "embedding_extraction_ms": 3.5441,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "0e32453c-8512-4b0a-9cb2-8a45235257f0",
-      "timestamp": "2026-04-14T22:38:54.269142",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.3004,
-          "face_detection_ms": 0.0207,
-          "embedding_extraction_ms": 0.2737,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "937a1317-8548-4fa3-999a-803b768c189f",
-      "timestamp": "2026-04-14T22:49:12.484486",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.6582,
-          "face_detection_ms": 0.3782,
-          "embedding_extraction_ms": 0.265,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "236aef28-d135-4104-97d6-d6a91bf21048",
-      "timestamp": "2026-04-14T22:49:35.050542",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.107,
-          "face_detection_ms": 0.017,
-          "embedding_extraction_ms": 0.083,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 6,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "f00ac170-e17b-44dc-a5e4-4a2b330cbc9c",
-      "timestamp": "2026-04-14T22:51:17.359375",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.015,
+          "total_ms": 0.8366,
           "face_detection_ms": 0.014,
+          "embedding_extraction_ms": 0.8161,
+          "matching_ms": 0.0
+        },
+        "face_detected": true,
+        "enrolled_users_count": 4,
+        "threshold_used": 0.75
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.75
+    },
+    {
+      "id": "7e83ba1a-4129-4699-aa2b-40bd2e1d5ffe",
+      "timestamp": "2026-04-15T00:07:54.917098",
+      "result": {
+        "name": "Unknown",
+        "confidence": 0.0,
+        "is_match": false,
+        "model": "Siamese",
+        "timing": {
+          "total_ms": 0.009,
+          "face_detection_ms": 0.009,
           "embedding_extraction_ms": 0,
           "matching_ms": 0
         },
@@ -1295,315 +414,7 @@
         "enrolled_users_count": 0,
         "threshold_used": 0.75
       },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "f12fc270-279d-4e75-9830-853c12e31b10",
-      "timestamp": "2026-04-14T22:51:27.994649",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.1077,
-          "face_detection_ms": 0.022,
-          "embedding_extraction_ms": 0.0817,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "c85412b9-8a0b-47b7-8cbc-b6ac38530334",
-      "timestamp": "2026-04-14T22:51:45.511636",
-      "result": {
-        "name": "m",
-        "confidence": 0.9579,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.642,
-          "face_detection_ms": 0.017,
-          "embedding_extraction_ms": 0.619,
-          "matching_ms": 0.001
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "2d58aaf5-3aae-4851-a179-9cada343cfe4",
-      "timestamp": "2026-04-14T22:52:00.389286",
-      "result": {
-        "name": "m",
-        "confidence": 0.998,
-        "is_match": true,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.1151,
-          "face_detection_ms": 0.0226,
-          "embedding_extraction_ms": 0.0856,
-          "matching_ms": 0.0019
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
       "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "3cc7797b-8ee1-4ab6-b80e-d7d11e2476c4",
-      "timestamp": "2026-04-14T22:52:19.035355",
-      "result": {
-        "name": "Unknown",
-        "confidence": 0.0,
-        "is_match": false,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.1137,
-          "face_detection_ms": 0.017,
-          "embedding_extraction_ms": 0.0927,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "885e913d-f1be-4905-a2ca-750c5a3997a3",
-      "timestamp": "2026-04-14T22:52:45.215436",
-      "result": {
-        "name": "m",
-        "confidence": 0.9039,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.6278,
-          "face_detection_ms": 0.019,
-          "embedding_extraction_ms": 0.6028,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "4ca78a72-e015-47fd-b8ac-cd7ff22991a7",
-      "timestamp": "2026-04-14T22:53:42.135947",
-      "result": {
-        "name": "m",
-        "confidence": 0.9371,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.6358,
-          "face_detection_ms": 0.016,
-          "embedding_extraction_ms": 0.6148,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "8a6f0353-87ab-49b8-8077-6a9d670faa31",
-      "timestamp": "2026-04-14T22:59:09.994968",
-      "result": {
-        "name": "m",
-        "confidence": 0.998,
-        "is_match": true,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.6449,
-          "face_detection_ms": 0.371,
-          "embedding_extraction_ms": 0.2445,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "11c1d5e0-ef67-4fe4-a921-35cf17eb876c",
-      "timestamp": "2026-04-14T22:59:26.909855",
-      "result": {
-        "name": "m",
-        "confidence": 0.9872,
-        "is_match": true,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.1006,
-          "face_detection_ms": 0.018,
-          "embedding_extraction_ms": 0.0776,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "53b4b977-243d-4cff-9300-ee746874d8ed",
-      "timestamp": "2026-04-14T22:59:47.443668",
-      "result": {
-        "name": "m",
-        "confidence": 0.9579,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 3.0163,
-          "face_detection_ms": 0.021,
-          "embedding_extraction_ms": 2.9923,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 1,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "00e02091-6886-44e9-878b-8beaff17a09c",
-      "timestamp": "2026-04-14T23:02:01.793959",
-      "result": {
-        "name": "m",
-        "confidence": 0.1292,
-        "is_match": false,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.6925,
-          "face_detection_ms": 0.056,
-          "embedding_extraction_ms": 0.5882,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 2,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "a3607e5e-3061-4ffa-9b98-726919d33c87",
-      "timestamp": "2026-04-14T23:02:17.757731",
-      "result": {
-        "name": "TOM",
-        "confidence": 0.8928,
-        "is_match": true,
-        "model": "Facenet",
-        "timing": {
-          "total_ms": 0.586,
-          "face_detection_ms": 0.009,
-          "embedding_extraction_ms": 0.573,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 2,
-        "threshold_used": 0.75
-      },
-      "model": "Facenet",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "b33d9810-0bd9-47a9-89f8-5a272fee2b54",
-      "timestamp": "2026-04-14T23:02:30.112343",
-      "result": {
-        "name": "TOM",
-        "confidence": 0.9075,
-        "is_match": true,
-        "model": "Siamese",
-        "timing": {
-          "total_ms": 0.0973,
-          "face_detection_ms": 0.0123,
-          "embedding_extraction_ms": 0.081,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 2,
-        "threshold_used": 0.75
-      },
-      "model": "Siamese",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "ac86de9a-d13c-4e97-9e86-c5c33ece3098",
-      "timestamp": "2026-04-14T23:02:42.598307",
-      "result": {
-        "name": "TOM",
-        "confidence": 0.7262,
-        "is_match": false,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.0886,
-          "face_detection_ms": 0.006,
-          "embedding_extraction_ms": 0.0786,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 2,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
-      "input_method": "upload",
-      "threshold": 0.75
-    },
-    {
-      "id": "c79083ce-cdf6-43d3-90b9-b93a97d509ef",
-      "timestamp": "2026-04-14T23:03:05.202987",
-      "result": {
-        "name": "TOM",
-        "confidence": 0.8786,
-        "is_match": true,
-        "model": "Arcface",
-        "timing": {
-          "total_ms": 0.1063,
-          "face_detection_ms": 0.0113,
-          "embedding_extraction_ms": 0.091,
-          "matching_ms": 0.0
-        },
-        "face_detected": true,
-        "enrolled_users_count": 2,
-        "threshold_used": 0.75
-      },
-      "model": "Arcface",
       "input_method": "upload",
       "threshold": 0.75
     }

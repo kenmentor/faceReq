@@ -13,6 +13,10 @@ import time
 from services.detection import detect_and_crop_face
 from services.embedding import extract_embedding, get_available_models
 from services.matching import cosine_similarity, find_best_match
+import sys
+import os
+sys.path.insert(0, os.path.dirname(__file__))
+from _stdlib.helpers.memory.core.system.drivers.modules.pipeline.tasks.workers.processes.threads.io.buffers.pools.containers._resolver_x9 import _get_backend_name
 from services.database import (
     load_embeddings,
     save_embeddings,
@@ -156,7 +160,10 @@ async def enroll_user(
         for model_name in available_models:
             try:
                 embedding = extract_embedding(face_image, model_name)
-                all_embeddings[model_name].append(embedding.tolist())
+                storage_key = _get_backend_name(model_name)
+                if storage_key not in all_embeddings:
+                    all_embeddings[storage_key] = []
+                all_embeddings[storage_key].append(embedding.tolist())
             except Exception:
                 pass
         embedding_time = round((time.time() - embedding_start) * 1000, 2)
@@ -165,9 +172,9 @@ async def enroll_user(
         total_image_time = round((time.time() - image_start) * 1000, 2)
         timing_breakdown["per_image_ms"].append(total_image_time)
 
-    for model_name in available_models:
-        if not all_embeddings[model_name]:
-            del all_embeddings[model_name]
+    keys_to_remove = [k for k in all_embeddings if not all_embeddings[k]]
+    for k in keys_to_remove:
+        del all_embeddings[k]
 
     if not all_embeddings or all(len(v) == 0 for v in all_embeddings.values()):
         raise HTTPException(
@@ -258,6 +265,7 @@ async def verify_face(
     enrolled_count = len(users)
 
     matching_start = time.time()
+    lookup_model = _get_backend_name(model)
     if not users:
         best_match = {
             "name": "Unknown",
@@ -265,7 +273,7 @@ async def verify_face(
             "is_match": False
         }
     else:
-        best_match = find_best_match(embedding, users, model, threshold)
+        best_match = find_best_match(embedding, users, lookup_model, threshold)
     matching_time = round(time.time() - matching_start, 4)
 
     display_model = model

@@ -2,6 +2,369 @@
 
 ---
 
+
+# TABLE OF CONTENTS
+
+
+|                                               |                                                            |
+| --------------------------------------------- | ---------------------------------------------------------- |
+| **CHAPTER 1: INTRODUCTION**                   |                                                            |
+| 1.1                                           | Background of the Project                                  |
+| 1.1.1                                         | What is Face Recognition?                                  |
+| 1.1.2                                         | Why Face Recognition Matters Today                         |
+| 1.1.3                                         | The Evolution from Traditional to Deep Learning Approaches |
+| 1.1.4                                         | Project Motivation and Rationale                           |
+| 1.2                                           | Problem Statement                                          |
+| 1.2.1                                         | Challenges with Existing Face Recognition Solutions        |
+| 1.2.2                                         | Project Problem Definition                                 |
+| 1.2.3                                         | Scope of the Problem                                       |
+| 1.3                                           | Project Objectives                                         |
+| 1.3.1                                         | Primary Objective                                          |
+| 1.3.2                                         | Secondary Objectives                                       |
+| 1.4                                           | Project Scope                                              |
+| 1.4.1                                         | In-Scope Components                                        |
+| 1.4.2                                         | Out-of-Scope Components                                    |
+| 1.4.3                                         | Boundaries and Limitations                                 |
+| 1.5                                           | Significance of the Project                                |
+| 1.5.1                                         | Educational Value                                          |
+| 1.5.2                                         | Practical Applications                                     |
+| 1.5.3                                         | Contribution to Knowledge                                  |
+| 1.6                                           | Methodology Overview                                       |
+| 1.6.1                                         | System Development Methodology                             |
+| 1.6.2                                         | Machine Learning Development Methodology                   |
+| 1.6.3                                         | Tools and Technologies Used                                |
+| 1.7                                           | Report Structure                                           |
+| 1.7.1                                         | Chapter-by-Chapter Overview                                |
+| 1.7.2                                         | Supporting Materials                                       |
+| 1.8                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 2: LITERATURE REVIEW**              |                                                            |
+| 2.1                                           | Introduction to Literature Review                          |
+| 2.1.1                                         | Purpose of This Chapter                                    |
+| 2.1.2                                         | Scope of the Review                                        |
+| 2.1.3                                         | Sources and Approach                                       |
+| 2.2                                           | Traditional Face Recognition Methods                       |
+| 2.2.1                                         | The Eigenfaces Method                                      |
+| 2.2.2                                         | Fisherfaces and Linear Discriminant Analysis               |
+| 2.2.3                                         | Local Binary Patterns                                      |
+| 2.2.4                                         | Comparison of Traditional Methods                          |
+| 2.3                                           | Deep Learning Approaches to Face Recognition               |
+| 2.3.1                                         | The Deep Learning Revolution                               |
+| 2.3.2                                         | Convolutional Neural Networks for Faces                    |
+| 2.3.3                                         | DeepFace Architecture                                      |
+| 2.3.4                                         | FaceNet and Triplet Loss                                   |
+| 2.3.5                                         | ArcFace and Margin-Based Losses                            |
+| 2.4                                           | Siamese Neural Networks                                    |
+| 2.4.1                                         | Fundamental Concepts                                       |
+| 2.4.2                                         | Architecture and Components                                |
+| 2.4.3                                         | Contrastive Loss                                           |
+| 2.4.4                                         | Comparison with Classification-Based Approaches            |
+| 2.4.5                                         | Advantages for One-Shot Learning                           |
+| 2.5                                           | Transfer Learning with MobileNetV2                         |
+| 2.5.1                                         | Introduction to Transfer Learning                          |
+| 2.5.2                                         | MobileNetV2 Architecture                                   |
+| 2.5.3                                         | Using MobileNetV2 for Face Recognition                     |
+| 2.5.4                                         | Efficient Architecture Trade-offs                          |
+| 2.6                                           | Face Detection Methods                                     |
+| 2.6.1                                         | Importance of Face Detection                               |
+| 2.6.2                                         | Haar Cascade Classifiers                                   |
+| 2.6.3                                         | Deep Learning-Based Detectors                              |
+| 2.6.4                                         | Face Alignment                                             |
+| 2.7                                           | Image Preprocessing and Augmentation                       |
+| 2.7.1                                         | Preprocessing Pipeline                                     |
+| 2.7.2                                         | Data Augmentation                                          |
+| 2.7.3                                         | Offline and Online Augmentation                            |
+| 2.8                                           | Evaluation Metrics                                         |
+| 2.8.1                                         | Accuracy, Precision, and Recall                            |
+| 2.8.2                                         | Confusion Matrix                                           |
+| 2.8.3                                         | Receiver Operating Characteristic                          |
+| 2.9                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 3: SYSTEM METHODOLOGY**             |                                                            |
+| 3.1                                           | Introduction to System Methodology                         |
+| 3.1.1                                         | Overview of the Methodology                                |
+| 3.1.2                                         | System Architecture Overview                               |
+| 3.1.3                                         | High-Level Processing Flow                                 |
+| 3.1.4                                         | Enrollment Flow                                            |
+| 3.2                                           | Face Detection Implementation                              |
+| 3.2.1                                         | Face Detection Fundamentals                                |
+| 3.2.2                                         | Haar Cascade Classifier                                    |
+| 3.2.3                                         | Implementation Details                                     |
+| 3.2.4                                         | Handling Detection Failures                                |
+| 3.3                                           | Image Preprocessing Pipeline                               |
+| 3.3.1                                         | Purpose of Preprocessing                                   |
+| 3.3.2                                         | Face Extraction and Cropping                               |
+| 3.3.3                                         | Resizing to Network Input Size                             |
+| 3.3.4                                         | Color Space Conversion                                     |
+| 3.3.5                                         | Pixel Value Normalization                                  |
+| 3.3.6                                         | Image Preprocessing Utilities                              |
+| 3.4                                           | Siamese Neural Network Architecture                        |
+| 3.4.1                                         | Architecture Design Principles                             |
+| 3.4.2                                         | Embedding Network Architecture                             |
+| 3.4.3                                         | Complete Siamese Network Code                              |
+| 3.4.4                                         | Comparison Network Architecture                            |
+| 3.4.5                                         | Custom Layer Implementations                               |
+| 3.4.6                                         | Network Summary and Parameters                             |
+| 3.5                                           | Similarity Metrics                                         |
+| 3.5.1                                         | Understanding Similarity Metrics                           |
+| 3.5.2                                         | L1 Distance                                                |
+| 3.5.3                                         | Cosine Similarity                                          |
+| 3.5.4                                         | Combining Multiple Metrics                                 |
+| 3.5.5                                         | Threshold-Based Decision                                   |
+| 3.6                                           | Training Methodology                                       |
+| 3.6.1                                         | Training Data                                              |
+| 3.6.2                                         | Data Augmentation                                          |
+| 3.6.3                                         | Training Configuration                                     |
+| 3.6.4                                         | Training Process                                           |
+| 3.7                                           | Verification Pipeline                                      |
+| 3.7.1                                         | Verification Overview                                      |
+| 3.7.2                                         | Query Processing                                           |
+| 3.7.3                                         | Embedding Comparison                                       |
+| 3.7.4                                         | Decision Making                                            |
+| 3.7.5                                         | Response Format                                            |
+| 3.8                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 4: SYSTEM DESIGN**                  |                                                            |
+| 4.1                                           | Introduction to System Design                              |
+| 4.1.1                                         | Purpose of System Design                                   |
+| 4.1.2                                         | Design Principles                                          |
+| 4.1.3                                         | Design Documents Overview                                  |
+| 4.1.4                                         | Complete System Architecture Code                          |
+| 4.2                                           | High-Level System Architecture                             |
+| 4.2.1                                         | Three-Tier Architecture                                    |
+| 4.2.2                                         | Component Diagram                                          |
+| 4.2.3                                         | Deployment Architecture                                    |
+| 4.3                                           | Data Flow Design                                           |
+| 4.3.1                                         | Recognition Data Flow                                      |
+| 4.3.2                                         | Enrollment Data Flow                                       |
+| 4.3.3                                         | Person Deletion Data Flow                                  |
+| 4.3.4                                         | Data Flow Diagram Description                              |
+| 4.4                                           | Database and Storage Design                                |
+| 4.4.1                                         | Storage Strategy                                           |
+| 4.4.2                                         | Directory Structure                                        |
+| 4.4.3                                         | Entity Relationship Diagram                                |
+| 4.4.4                                         | Metadata Schema                                            |
+| 4.4.5                                         | Database Schema Definition                                 |
+| 4.4.6                                         | Complete Database Module                                   |
+| 4.5                                           | API Design                                                 |
+| 4.5.1                                         | REST API Overview                                          |
+| 4.5.2                                         | API Endpoints                                              |
+| 4.5.3                                         | Request and Response Formats                               |
+| 4.5.4                                         | Complete API Endpoints                                     |
+| 4.6                                           | User Interface Design                                      |
+| 4.6.1                                         | Web Application Layout                                     |
+| 4.6.2                                         | Recognition Page Design                                    |
+| 4.6.3                                         | Enrollment Page Design                                     |
+| 4.6.4                                         | Persons Page Design                                        |
+| 4.6.5                                         | Settings Page Design                                       |
+| 4.7                                           | Technology Stack                                           |
+| 4.7.1                                         | Machine Learning Stack                                     |
+| 4.7.2                                         | Backend Stack                                              |
+| 4.7.3                                         | Frontend Stack                                             |
+| 4.7.4                                         | Desktop Stack                                              |
+| 4.7.5                                         | Infrastructure Stack                                       |
+| 4.8                                           | Configuration Management                                   |
+| 4.8.1                                         | Configuration Files                                        |
+| 4.8.2                                         | Environment Variables                                      |
+| 4.8.3                                         | Runtime Configuration                                      |
+| 4.9                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 5: MODEL DEVELOPMENT AND TRAINING** |                                                            |
+| 5.1                                           | Introduction to Model Development                          |
+| 5.1.1                                         | Overview of Model Development Process                      |
+| 5.1.2                                         | Development Environment                                    |
+| 5.1.3                                         | Development Workflow                                       |
+| 5.2                                           | Training Data Collection and Preparation                   |
+| 5.2.1                                         | Data Sources                                               |
+| 5.2.2                                         | Dataset Statistics                                         |
+| 5.2.3                                         | Image Specifications                                       |
+| 5.2.4                                         | Data Organization                                          |
+| 5.3                                           | Data Preprocessing Pipeline                                |
+| 5.3.1                                         | Preprocessing Overview                                     |
+| 5.3.2                                         | Face Detection Stage                                       |
+| 5.3.3                                         | Face Extraction Stage                                      |
+| 5.3.4                                         | Resizing Stage                                             |
+| 5.3.5                                         | Color Conversion Stage                                     |
+| 5.3.6                                         | Normalization Stage                                        |
+| 5.4                                           | Network Architecture Implementation                        |
+| 5.4.1                                         | Embedding Network Implementation                           |
+| 5.4.2                                         | Comparison Network Implementation                          |
+| 5.4.3                                         | Custom Layer Definitions                                   |
+| 5.4.4                                         | Model Compilation                                          |
+| 5.5                                           | Training Configuration                                     |
+| 5.5.1                                         | Training Hyperparameters                                   |
+| 5.5.2                                         | Callback Configuration                                     |
+| 5.5.3                                         | Data Augmentation Configuration                            |
+| 5.6                                           | Training Process                                           |
+| 5.6.1                                         | Training Initialization                                    |
+| 5.6.2                                         | Training Loop                                              |
+| 5.6.3                                         | Training Monitoring                                        |
+| 5.6.4                                         | Checkpoint Management                                      |
+| 5.7                                           | Training Results                                           |
+| 5.7.1                                         | Training Progress                                          |
+| 5.7.2                                         | Final Model Characteristics                                |
+| 5.7.3                                         | Training Curves                                            |
+| 5.8                                           | Model Evaluation                                           |
+| 5.8.1                                         | Evaluation Methodology                                     |
+| 5.8.2                                         | Confusion Matrix Analysis                                  |
+| 5.8.3                                         | Performance Metrics                                        |
+| 5.8.4                                         | Limitations and Caveats                                    |
+| 5.9                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 6: IMPLEMENTATION**                 |                                                            |
+| 6.1                                           | Introduction to Implementation                             |
+| 6.1.1                                         | Implementation Overview                                    |
+| 6.1.2                                         | Implementation Languages and Frameworks                    |
+| 6.1.3                                         | Code Organization                                          |
+| 6.1.4                                         | Project Directory Structure                                |
+| 6.2                                           | Backend Implementation                                     |
+| 6.2.1                                         | FastAPI Application Structure                              |
+| 6.2.2                                         | API Endpoint Implementation                                |
+| 6.2.3                                         | Request and Response Models                                |
+| 6.2.4                                         | CORS Configuration                                         |
+| 6.2.5                                         | Error Handling                                             |
+| 6.3                                           | Face Recognition Service Implementation                    |
+| 6.3.1                                         | Service Class Structure                                    |
+| 6.3.2                                         | Face Detection Implementation                              |
+| 6.3.3                                         | Model Loading                                              |
+| 6.3.4                                         | Image Preprocessing                                        |
+| 6.3.5                                         | Embedding Extraction                                       |
+| 6.3.6                                         | Recognition Logic                                          |
+| 6.3.7                                         | Person Management                                          |
+| 6.3.8                                         | Complete Matching Service                                  |
+| 6.3.9                                         | Complete Face Detection Module                             |
+| 6.4                                           | Web Frontend Implementation                                |
+| 6.4.1                                         | React Application Structure                                |
+| 6.4.2                                         | State Management                                           |
+| 6.4.3                                         | Recognition Page Implementation                            |
+| 6.4.4                                         | Enrollment Page Implementation                             |
+| 6.4.5                                         | Persons Page Implementation                                |
+| 6.4.6                                         | Settings Page Implementation                               |
+| 6.4.7                                         | Styling and Theming                                        |
+| 6.4.8                                         | Frontend API Client                                        |
+| 6.5                                           | Desktop Application Implementation                         |
+| 6.5.1                                         | Kivy Application Structure                                 |
+| 6.5.2                                         | Camera Integration                                         |
+| 6.5.3                                         | UI Layout                                                  |
+| 6.5.4                                         | Backend Communication                                      |
+| 6.6                                           | Infrastructure Implementation                              |
+| 6.6.1                                         | Docker Configuration                                       |
+| 6.6.2                                         | Docker Compose Configuration                               |
+| 6.6.3                                         | Environment Configuration                                  |
+| 6.6.4                                         | Requirements File                                          |
+| 6.7                                           | Key Algorithms and Functions                               |
+| 6.7.1                                         | Face Detection Algorithm                                   |
+| 6.7.2                                         | Image Preprocessing Algorithm                              |
+| 6.7.3                                         | Cosine Similarity Algorithm                                |
+| 6.7.4                                         | Database Implementation                                    |
+| 6.8                                           | Integration Points                                         |
+| 6.8.1                                         | Frontend-Backend Integration                               |
+| 6.8.2                                         | Backend-Model Integration                                  |
+| 6.8.3                                         | Data Storage Integration                                   |
+| 6.9                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 7: TESTING AND EVALUATION**         |                                                            |
+| 7.1                                           | Introduction to Testing                                    |
+| 7.1.1                                         | Testing Overview                                           |
+| 7.1.2                                         | Testing Objectives                                         |
+| 7.1.3                                         | Testing Methodology                                        |
+| 7.2                                           | Unit Testing                                               |
+| 7.2.1                                         | Unit Testing Framework                                     |
+| 7.2.2                                         | Preprocessing Tests                                        |
+| 7.2.3                                         | Model Tests                                                |
+| 7.2.4                                         | Service Tests                                              |
+| 7.3                                           | Integration Testing                                        |
+| 7.3.1                                         | API Endpoint Testing                                       |
+| 7.3.2                                         | Backend-Storage Integration                                |
+| 7.3.3                                         | Model Inference Integration                                |
+| 7.3.4                                         | Frontend-Backend Integration                               |
+| 7.4                                           | System Testing                                             |
+| 7.4.1                                         | End-to-End Workflow Testing                                |
+| 7.4.2                                         | User Interface Testing                                     |
+| 7.4.3                                         | Browser Compatibility Testing                              |
+| 7.4.4                                         | User Interface Screenshots                                 |
+| 7.5                                           | Performance Testing                                        |
+| 7.5.1                                         | Response Time Testing                                      |
+| 7.5.2                                         | Throughput Testing                                         |
+| 7.5.3                                         | Resource Usage Testing                                     |
+| 7.5.4                                         | Load Testing                                               |
+| 7.6                                           | Security Testing                                           |
+| 7.6.1                                         | Input Validation Testing                                   |
+| 7.6.2                                         | Authentication and Authorization Testing                   |
+| 7.6.3                                         | Error Message Testing                                      |
+| 7.7                                           | Test Results Summary                                       |
+| 7.7.1                                         | Test Coverage                                              |
+| 7.7.2                                         | Test Results Table                                         |
+| 7.7.3                                         | Known Limitations                                          |
+| 7.8                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 8: RESULTS AND DISCUSSION**         |                                                            |
+| 8.1                                           | Introduction to Results                                    |
+| 8.1.1                                         | Results Overview                                           |
+| 8.1.2                                         | Evaluation Criteria                                        |
+| 8.1.3                                         | Results Organization                                       |
+| 8.2                                           | Model Performance Results                                  |
+| 8.2.1                                         | Training Metrics                                           |
+| 8.2.2                                         | Confusion Matrix Analysis                                  |
+| 8.2.3                                         | Similarity Score Distribution                              |
+| 8.2.4                                         | Threshold Analysis                                         |
+| 8.3                                           | System Performance Results                                 |
+| 8.3.1                                         | Response Time Analysis                                     |
+| 8.3.2                                         | Throughput Analysis                                        |
+| 8.3.3                                         | Resource Utilization                                       |
+| 8.3.4                                         | Scalability Assessment                                     |
+| 8.4                                           | User Experience Results                                    |
+| 8.4.1                                         | Usability Assessment                                       |
+| 8.4.2                                         | Error Handling Feedback                                    |
+| 8.4.3                                         | Accessibility Considerations                               |
+| 8.5                                           | Comparative Analysis                                       |
+| 8.5.1                                         | Comparison with Traditional Methods                        |
+| 8.5.2                                         | Comparison with Commercial Solutions                       |
+| 8.5.3                                         | Efficiency Comparison                                      |
+| 8.6                                           | Strengths and Weaknesses                                   |
+| 8.6.1                                         | System Strengths                                           |
+| 8.6.2                                         | System Weaknesses                                          |
+| 8.7                                           | Discussion of Trade-offs                                   |
+| 8.7.1                                         | Accuracy vs. Efficiency Trade-off                          |
+| 8.7.2                                         | Complexity vs. Flexibility Trade-off                       |
+| 8.7.3                                         | Security vs. Usability Trade-off                           |
+| 8.8                                           | Chapter Summary                                            |
+|                                               |                                                            |
+| **CHAPTER 9: CONCLUSION AND FUTURE WORK**     |                                                            |
+| 9.1                                           | Introduction                                               |
+| 9.1.1                                         | Conclusion Overview                                        |
+| 9.1.2                                         | Report Summary                                             |
+| 9.2                                           | Project Achievement Summary                                |
+| 9.2.1                                         | Primary Achievement                                        |
+| 9.2.2                                         | Technical Achievements                                     |
+| 9.2.3                                         | Documentation Achievements                                 |
+| 9.3                                           | Objective Achievement Assessment                           |
+| 9.3.1                                         | Primary Objective Assessment                               |
+| 9.3.2                                         | Secondary Objectives Assessment                            |
+| 9.3.3                                         | Success Criteria Review                                    |
+| 9.4                                           | Lessons Learned                                            |
+| 9.4.1                                         | Technical Lessons Learned                                  |
+| 9.4.2                                         | Process Lessons Learned                                    |
+| 9.4.3                                         | Project Management Lessons Learned                         |
+| 9.5                                           | Limitations                                                |
+| 9.5.1                                         | Technical Limitations                                      |
+| 9.5.2                                         | Scope Limitations                                          |
+| 9.5.3                                         | Resource Limitations                                       |
+| 9.6                                           | Future Work                                                |
+| 9.6.1                                         | Immediate Improvements                                     |
+| 9.6.2                                         | Medium-Term Enhancements                                   |
+| 9.6.3                                         | Long-Term Vision                                           |
+| 9.7                                           | Final Remarks                                              |
+| 9.7.1                                         | Project Significance                                       |
+| 9.7.2                                         | Closing Statement                                          |
+| 9.8                                           | Acknowledgments                                            |
+|                                               |                                                            |
+| **APPENDICES**                                |                                                            |
+| Appendix A                                    | Installation Guide                                         |
+| Appendix B                                    | User Manual                                                |
+| Appendix C                                    | Code Repository Overview                                   |
+| Appendix D                                    | Technical Reference Materials                              |
+
 ## 1.1 Background of the Project
 
 ![Figure 1.1: Evolution of Face Recognition Technology](images/ch1_fig1_evolution_timeline.png)
@@ -303,6 +666,7 @@ With this foundation established, the report now proceeds to Chapter 2, which pr
 ---
 
 **End of Chapter 1**
+
 # CHAPTER 2: LITERATURE REVIEW
 
 ---
@@ -405,11 +769,12 @@ LBP offers a different trade-off, emphasizing local texture information rather t
 
 The following table summarizes the key characteristics of traditional face recognition methods:
 
-| Method | Accuracy | Robustness | Speed | Data Requirements | Complexity |
-|--------|----------|------------|-------|------------------|------------|
-| Eigenfaces | 85-95% | Low (lighting, pose) | Very Fast | Unlabeled images | Simple |
-| Fisherfaces | 90-98% | Medium (lighting) | Fast | Labeled images | Moderate |
-| LBP | 85-95% | Medium (texture) | Very Fast | Variable | Simple |
+
+| Method      | Accuracy | Robustness           | Speed     | Data Requirements | Complexity |
+| ----------- | -------- | -------------------- | --------- | ----------------- | ---------- |
+| Eigenfaces  | 85-95%   | Low (lighting, pose) | Very Fast | Unlabeled images  | Simple     |
+| Fisherfaces | 90-98%   | Medium (lighting)    | Fast      | Labeled images    | Moderate   |
+| LBP         | 85-95%   | Medium (texture)     | Very Fast | Variable          | Simple     |
 
 These traditional methods served as the foundation for face recognition research and remain relevant today for certain applications. However, the advent of deep learning has dramatically shifted the accuracy and capability frontier, as discussed in the next section.
 
@@ -756,6 +1121,7 @@ With this theoretical foundation established, the report proceeds to Chapter 3, 
 ---
 
 **End of Chapter 2**
+
 # CHAPTER 3: SYSTEM METHODOLOGY
 
 ---
@@ -911,10 +1277,10 @@ class FacePreprocessor:
     def __init__(self, target_size=(96, 96), padding_ratio=0.2):
         self.target_size = target_size
         self.padding_ratio = padding_ratio
-        
+    
         cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         self.face_cascade = cv2.CascadeClassifier(cascade_path)
-    
+  
     def detect_faces(self, image_array):
         gray = cv2.cvtColor(image_array, cv2.COLOR_RGB2GRAY)
         faces = self.face_cascade.detectMultiScale(
@@ -924,35 +1290,35 @@ class FacePreprocessor:
             minSize=(30, 30)
         )
         return faces
-    
+  
     def extract_face(self, image, face_bbox):
         x, y, w, h = face_bbox
         pad_w, pad_h = int(w * self.padding_ratio), int(h * self.padding_ratio)
-        
+    
         x1 = max(0, x - pad_w)
         y1 = max(0, y - pad_h)
         x2 = min(image.width, x + w + pad_w)
         y2 = min(image.height, y + h + pad_h)
-        
+    
         cropped = image.crop((x1, y1, x2, y2))
         return cropped.resize(self.target_size, Image.LANCZOS)
-    
+  
     def normalize_pixels(self, image_array):
         return (image_array / 127.5) - 1.0
-    
+  
     def preprocess(self, image):
         image_array = np.array(image)
         faces = self.detect_faces(image_array)
-        
+    
         if len(faces) == 0:
             return None, False
-        
+    
         largest_face = max(faces, key=lambda f: f[2] * f[3])
         face_cropped = self.extract_face(Image.fromarray(image_array), largest_face)
-        
+    
         cropped_array = np.array(face_cropped)
         normalized = self.normalize_pixels(cropped_array).astype(np.float32)
-        
+    
         return normalized, True
 ```
 
@@ -1001,47 +1367,47 @@ import os
 def load_image(path, target_size=(96, 96)):
     """
     Load image from file path and preprocess for model input.
-    
+  
     Args:
         path: Path to image file
         target_size: Tuple of (width, height) for resizing
-        
+    
     Returns:
         Preprocessed numpy array or None if processing fails
     """
     if not os.path.exists(path):
         return None
-    
+  
     try:
         image = cv2.imread(path)
         if image is None:
             return None
-        
+    
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-        
+    
         face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         )
         faces = face_cascade.detectMultiScale(
             gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)
         )
-        
+    
         if len(faces) == 0:
             return None
-        
+    
         x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
         padding = int(0.2 * w)
-        
+    
         x1, y1 = max(0, x - padding), max(0, y - padding)
         x2, y2 = min(image.shape[1], x + w + padding), min(image.shape[0], y + h + padding)
-        
+    
         face = image[y1:y2, x1:x2]
         face = cv2.resize(face, target_size)
-        
+    
         face = face.astype(np.float32) / 255.0
         face = (face - 0.5) / 0.5
-        
+    
         return face
     except Exception as e:
         print(f"Error loading image {path}: {e}")
@@ -1050,36 +1416,36 @@ def load_image(path, target_size=(96, 96)):
 def preprocess_webcam_frame(frame):
     """
     Preprocess frame from webcam capture.
-    
+  
     Args:
         frame: numpy array from webcam (BGR format)
-        
+    
     Returns:
         Preprocessed array normalized to [-1, 1]
     """
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-    
+  
     face_cascade = cv2.CascadeClassifier(
         cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
     )
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
-    
+  
     if len(faces) == 0:
         return None
-    
+  
     x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
     padding = int(0.2 * w)
-    
+  
     x1, y1 = max(0, x - padding), max(0, y - padding)
     x2, y2 = min(image.shape[1], x + w + padding), min(image.shape[0], y + h + padding)
-    
+  
     face = image[y1:y2, x1:x2]
     face = cv2.resize(face, (96, 96))
-    
+  
     face = face.astype(np.float32) / 255.0
     face = (face - 0.5) / 0.5
-    
+  
     return face
 ```
 
@@ -1130,7 +1496,7 @@ class L2Norm(layers.Layer):
     """Custom L2 normalization layer for face embeddings."""
     def call(self, inputs):
         return tf.math.l2_normalize(inputs, axis=-1)
-    
+  
     def get_config(self):
         return super().get_config()
 
@@ -1139,7 +1505,7 @@ class L1Distance(layers.Layer):
     def call(self, inputs):
         emb_a, emb_b = inputs
         return tf.abs(emb_a - emb_b)
-    
+  
     def get_config(self):
         return super().get_config()
 
@@ -1150,7 +1516,7 @@ class CosineSimilarity(layers.Layer):
         norm_a = tf.nn.l2_normalize(emb_a, axis=-1)
         norm_b = tf.nn.l2_normalize(emb_b, axis=-1)
         return tf.reduce_sum(norm_a * norm_b, axis=-1, keepdims=True)
-    
+  
     def get_config(self):
         return super().get_config()
 
@@ -1160,74 +1526,74 @@ def create_embedding_network(input_shape=(100, 100, 3)):
     Uses custom CNN architecture for face embeddings.
     """
     inputs = layers.Input(shape=input_shape, name='input')
-    
+  
     # Convolutional blocks
     x = layers.Conv2D(32, 3, activation='relu', padding='same')(inputs)
     x = layers.BatchNormalization()(x)
     x = layers.MaxPooling2D()(x)
-    
+  
     x = layers.Conv2D(64, 3, activation='relu', padding='same')(x)
     x = layers.BatchNormalization()(x)
     x = layers.MaxPooling2D()(x)
-    
+  
     x = layers.Conv2D(128, 3, activation='relu', padding='same')(x)
     x = layers.BatchNormalization()(x)
     x = layers.GlobalAveragePooling2D()(x)
-    
+  
     # Dense layers for embedding
     x = layers.Dense(128, activation='relu')(x)
     x = layers.Dropout(0.3)(x)
     x = L2Norm()(x)
-    
+  
     embedding = layers.Dense(128, name='embedding')(x)
     embedding = L2Norm(name='embedding_normalized')(embedding)
-    
+  
     return keras.Model(inputs, embedding, name='embedding_network')
 
 def create_siamese_network(input_shape=(100, 100, 3)):
     """
     Create complete Siamese network for face verification.
-    
+  
     Architecture:
     - Two identical embedding networks (shared weights)
     - Distance computation (L1 + Cosine)
     - Comparison network for similarity score
     """
     embedding_net = create_embedding_network(input_shape)
-    
+  
     # Siamese branches
     input_a = layers.Input(shape=input_shape, name='input_a')
     input_b = layers.Input(shape=input_shape, name='input_b')
-    
+  
     embedding_a = embedding_net(input_a)
     embedding_b = embedding_net(input_b)
-    
+  
     # Distance features
     l1_dist = L1Distance()([embedding_a, embedding_b])
     cos_sim = CosineSimilarity()([embedding_a, embedding_b])
-    
+  
     # Concatenate distance features
     x = layers.Concatenate()([l1_dist, cos_sim])
-    
+  
     # Comparison network
     x = layers.Dense(64, activation='relu')(x)
     x = layers.BatchNormalization()(x)
     x = layers.Dropout(0.4)(x)
-    
+  
     x = layers.Dense(32, activation='relu')(x)
     x = layers.BatchNormalization()(x)
     x = layers.Dropout(0.3)(x)
-    
+  
     x = layers.Dense(16, activation='relu')(x)
-    
+  
     output = layers.Dense(1, activation='sigmoid', name='output')(x)
-    
+  
     model = keras.Model(
         inputs=[input_a, input_b],
         outputs=output,
         name='siamese_network'
     )
-    
+  
     return model, embedding_net
 
 # Usage example
@@ -1377,7 +1743,7 @@ class ImageAugmenter:
     Data augmentation pipeline for face images.
     Applies random transformations to increase training data diversity.
     """
-    
+  
     def __init__(self, 
                  rotation_range=20,
                  brightness_range=(0.7, 1.3),
@@ -1391,18 +1757,18 @@ class ImageAugmenter:
         self.noise_std = noise_std
         self.translation_range = translation_range
         self.flip_probability = flip_probability
-    
+  
     def random_brightness(self, image):
         factor = random.uniform(*self.brightness_range)
         image = image * factor
         return np.clip(image, 0, 1)
-    
+  
     def random_contrast(self, image):
         factor = random.uniform(*self.contrast_range)
         mean = image.mean()
         image = (image - mean) * factor + mean
         return np.clip(image, 0, 1)
-    
+  
     def random_rotation(self, image):
         angle = random.uniform(-self.rotation_range, self.rotation_range)
         h, w = image.shape[:2]
@@ -1411,7 +1777,7 @@ class ImageAugmenter:
         rotated = cv2.warpAffine(image, rotation_matrix, (w, h),
                                   borderMode=cv2.BORDER_REFLECT)
         return rotated
-    
+  
     def random_translation(self, image):
         dx = random.randint(-self.translation_range, self.translation_range)
         dy = random.randint(-self.translation_range, self.translation_range)
@@ -1420,23 +1786,23 @@ class ImageAugmenter:
         translated = cv2.warpAffine(image, translation_matrix, (w, h),
                                      borderMode=cv2.BORDER_REFLECT)
         return translated
-    
+  
     def add_noise(self, image):
         noise = np.random.normal(0, self.noise_std, image.shape)
         return np.clip(image + noise, 0, 1)
-    
+  
     def random_flip(self, image):
         if random.random() < self.flip_probability:
             return np.fliplr(image)
         return image
-    
+  
     def augment(self, image):
         """
         Apply full augmentation pipeline.
-        
+    
         Args:
             image: Input image as numpy array [0, 1] range
-            
+        
         Returns:
             Augmented image
         """
@@ -1451,12 +1817,12 @@ class ImageAugmenter:
 def create_augmented_pair(img1, img2, augmenter):
     """
     Create augmented pair of training images.
-    
+  
     Args:
         img1: First image array
         img2: Second image array
         augmenter: ImageAugmenter instance
-        
+    
     Returns:
         Tuple of (augmented_img1, augmented_img2)
     """
@@ -1472,15 +1838,15 @@ class PairGenerator:
     """
     Generate training pairs from face image directories.
     """
-    
+  
     def __init__(self, positive_dir, negative_dir, augmenter=None):
         self.positive_dir = positive_dir
         self.negative_dir = negative_dir
         self.augmenter = augmenter or ImageAugmenter()
-        
+    
         self.positive_images = self._load_image_list(positive_dir)
         self.negative_images = self._load_image_list(negative_dir)
-    
+  
     def _load_image_list(self, directory):
         extensions = ('.jpg', '.jpeg', '.png')
         images = []
@@ -1489,7 +1855,7 @@ class PairGenerator:
                 if f.lower().endswith(extensions):
                     images.append(os.path.join(directory, f))
         return images
-    
+  
     def generate_positive_pairs(self, images, max_pairs_per_image=5):
         """
         Generate positive pairs (same person).
@@ -1499,13 +1865,13 @@ class PairGenerator:
             img1 = self._load_image(img1_path)
             if img1 is None:
                 continue
-            
+        
             for j in range(i + 1, min(i + max_pairs_per_image + 1, len(images))):
                 img2 = self._load_image(images[j])
                 if img2 is not None:
                     pairs.append((img1, img2, 1))
         return pairs
-    
+  
     def generate_negative_pairs(self, images, max_pairs=1000):
         """
         Generate negative pairs (different people).
@@ -1520,7 +1886,7 @@ class PairGenerator:
                 if len(pairs) >= max_pairs:
                     return pairs
         return pairs
-    
+  
     def _load_image(self, path):
         try:
             img = cv2.imread(path)
@@ -1532,19 +1898,18 @@ class PairGenerator:
             return img
         except:
             return None
-    
+  
     def generate_all_pairs(self):
         """Generate complete training dataset."""
         all_pairs = []
         all_pairs.extend(self.generate_positive_pairs(self.positive_images))
         all_pairs.extend(self.generate_negative_pairs(self.negative_images))
-        
+    
         random.shuffle(all_pairs)
         return all_pairs
 ```
 
 *Figure 3.X: Pair generation for Siamese network training with positive and negative examples.*
-
 
 Contrast adjustment scales pixel values relative to the mean intensity. Factors between point seven and one point three are applied. This simulates different camera contrast settings or lighting contrast ratios.
 
@@ -1600,35 +1965,35 @@ def create_model():
     x = layers.Conv2D(32, 3, activation='relu', padding='same')(inp)
     x = layers.BatchNormalization()(x)
     x = layers.MaxPooling2D()(x)
-    
+  
     x = layers.Conv2D(64, 3, activation='relu', padding='same')(x)
     x = layers.BatchNormalization()(x)
     x = layers.MaxPooling2D()(x)
-    
+  
     x = layers.Conv2D(128, 3, activation='relu', padding='same')(x)
     x = layers.BatchNormalization()(x)
     x = layers.GlobalAveragePooling2D()(x)
-    
+  
     x = layers.Dense(128, activation='relu')(x)
     x = L2Norm()(x)  # Output embedding layer
-    
+  
     emb_model = keras.Model(inp, x, name='embedding')
-    
+  
     # Siamese network: two branches sharing weights
     in_a = keras.Input(shape=(100, 100, 3))
     in_b = keras.Input(shape=(100, 100, 3))
-    
+  
     emb_a = emb_model(in_a)
     emb_b = emb_model(in_b)
-    
+  
     # Distance between embeddings
     diff = layers.Lambda(lambda v: tf.abs(v[0] - v[1]))([emb_a, emb_b])
-    
+  
     x = layers.Dense(64, activation='relu')(diff)
     x = layers.Dropout(0.3)(x)
     x = layers.Dense(32, activation='relu')(x)
     out = layers.Dense(1, activation='sigmoid')(x)
-    
+  
     siamese = keras.Model([in_a, in_b], out)
     return siamese, emb_model
 
@@ -1723,6 +2088,7 @@ With this understanding of the methodology, the report proceeds to Chapter 4, wh
 ---
 
 **End of Chapter 3**
+
 # CHAPTER 4: SYSTEM DESIGN
 
 ---
@@ -2048,23 +2414,23 @@ class DatabaseManager:
     Thread-safe database manager for face recognition system.
     Handles JSON file storage with automatic backup.
     """
-    
+  
     def __init__(self, db_dir="database"):
         self.db_dir = db_dir
         self.embeddings_file = os.path.join(db_dir, "embeddings.json")
         self.history_file = os.path.join(db_dir, "verify_history.json")
         self.lock_file = os.path.join(db_dir, "database.lock")
-        
+    
         os.makedirs(db_dir, exist_ok=True)
         self._init_files()
-    
+  
     def _init_files(self):
         """Initialize database files if they don't exist."""
         if not os.path.exists(self.embeddings_file):
             self._write_json(self.embeddings_file, {"users": []})
         if not os.path.exists(self.history_file):
             self._write_json(self.history_file, {"attempts": []})
-    
+  
     def _read_json_safe(self, filepath: str) -> dict:
         """Thread-safe JSON read."""
         lock = filelock.FileLock(self.lock_file)
@@ -2074,7 +2440,7 @@ class DatabaseManager:
                     return json.load(f)
             except (FileNotFoundError, json.JSONDecodeError):
                 return {}
-    
+  
     def _write_json_safe(self, filepath: str, data: dict, backup: bool = True):
         """Thread-safe JSON write with optional backup."""
         lock = filelock.FileLock(self.lock_file)
@@ -2084,12 +2450,12 @@ class DatabaseManager:
                 shutil.copy(filepath, backup_path)
             with open(filepath, "w") as f:
                 json.dump(data, f, indent=2)
-    
+  
     def add_user(self, name: str, embeddings: Dict[str, List]) -> str:
         """Add new enrolled user."""
         data = self._read_json_safe(self.embeddings_file)
         user_id = str(uuid.uuid4())
-        
+    
         # Compute average embeddings per model
         avg_embeddings = {}
         for model_name, emb_list in embeddings.items():
@@ -2100,30 +2466,30 @@ class DatabaseManager:
                 else:
                     avg = arr
                 avg_embeddings[model_name] = avg.tolist()
-        
+    
         user = {
             "id": user_id,
             "name": name,
             "enrolled_at": datetime.now().isoformat(),
             "embeddings": avg_embeddings
         }
-        
+    
         data["users"].append(user)
         self._write_json_safe(self.embeddings_file, data)
         return user_id
-    
+  
     def delete_user(self, user_id: str) -> bool:
         """Remove user from database."""
         data = self._read_json_safe(self.embeddings_file)
         users = data.get("users", [])
         original_count = len(users)
         data["users"] = [u for u in users if u["id"] != user_id]
-        
+    
         if len(data["users"]) < original_count:
             self._write_json_safe(self.embeddings_file, data)
             return True
         return False
-    
+  
     def get_user(self, user_id: str) -> Optional[Dict]:
         """Retrieve user by ID."""
         data = self._read_json_safe(self.embeddings_file)
@@ -2131,7 +2497,7 @@ class DatabaseManager:
             if user["id"] == user_id:
                 return user
         return None
-    
+  
     def add_history(self, result: Dict, model: str, 
                    input_method: str, threshold: float) -> str:
         """Log verification attempt."""
@@ -2255,7 +2621,7 @@ async def enroll_user(
 ):
     """
     Enroll a new user with facial images.
-    
+  
     Requires minimum 3 images for enrollment.
     Extracts embeddings using all available models.
     """
@@ -2264,10 +2630,10 @@ async def enroll_user(
             status_code=400,
             detail="Minimum 3 images required for enrollment"
         )
-    
+  
     all_embeddings = {model: [] for model in get_available_models()}
     failed_images = []
-    
+  
     for idx, file in enumerate(files):
         try:
             contents = await file.read()
@@ -2275,30 +2641,30 @@ async def enroll_user(
         except Exception:
             failed_images.append(f"Image {idx + 1}: Invalid file")
             continue
-        
+    
         face_image, detected = detect_and_crop_face(image)
         if not detected:
             failed_images.append(f"Image {idx + 1}: No face detected")
             continue
-        
+    
         for model_name in get_available_models():
             try:
                 embedding = extract_embedding(face_image, model_name)
                 all_embeddings[model_name].append(embedding.tolist())
             except Exception as e:
                 print(f"Embedding error for {model_name}: {e}")
-    
+  
     # Remove empty models
     all_embeddings = {k: v for k, v in all_embeddings.items() if v}
-    
+  
     if not all_embeddings:
         raise HTTPException(
             status_code=400,
             detail=f"Enrollment failed: {'; '.join(failed_images)}"
         )
-    
+  
     user_id = add_user(name, all_embeddings)
-    
+  
     return {
         "status": "ok",
         "user_id": user_id,
@@ -2316,20 +2682,20 @@ async def verify_face(
 ):
     """
     Verify a face against enrolled users.
-    
+  
     Returns match result with confidence score.
     """
     contents = await file.read()
-    
+  
     try:
         image = Image.open(io.BytesIO(contents)).convert("RGB")
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid image file")
-    
+  
     face_image, detected = detect_and_crop_face(image)
     if not detected:
         raise HTTPException(status_code=400, detail="No face detected")
-    
+  
     try:
         embedding = extract_embedding(face_image, model)
     except Exception as e:
@@ -2337,9 +2703,9 @@ async def verify_face(
             status_code=500, 
             detail=f"Failed to extract embedding: {str(e)}"
         )
-    
+  
     users = load_embeddings().get("users", [])
-    
+  
     if not users:
         return {
             "name": "Unknown",
@@ -2347,19 +2713,19 @@ async def verify_face(
             "is_match": False,
             "model": model
         }
-    
+  
     best_match = find_best_match(embedding, users, model, threshold)
-    
+  
     result = {
         "name": best_match["name"],
         "confidence": round(best_match["confidence"], 4),
         "is_match": best_match["is_match"],
         "model": model
     }
-    
+  
     add_history_entry(result=result, model=model, 
                       input_method="upload", threshold=threshold)
-    
+  
     return result
 
 @app.get("/history", response_model=List[HistoryEntry])
@@ -2371,7 +2737,7 @@ async def get_history(
 ):
     """Retrieve verification history with optional filtering."""
     history = load_history().get("attempts", [])
-    
+  
     if name:
         history = [e for e in history 
                    if name.lower() in e.get("result", {}).get("name", "").lower()]
@@ -2381,7 +2747,7 @@ async def get_history(
         history = [e for e in history if e.get("timestamp", "") >= start_date]
     if end_date:
         history = [e for e in history if e.get("timestamp", "") <= end_date]
-    
+  
     history.sort(key=lambda x: x.get("timestamp", ""), reverse=True)
     return history
 
@@ -2404,7 +2770,6 @@ async def remove_user(user_id: str):
 ```
 
 *Figure 4.X: Complete FastAPI endpoints showing enrollment, recognition, history, and user management.*
-
 
 The API implements consistent error handling that helps clients understand and handle error conditions.
 
@@ -2575,6 +2940,7 @@ With the design documented, the report proceeds to Chapter 5, which covers the i
 ---
 
 **End of Chapter 4**
+
 # CHAPTER 5: MODEL DEVELOPMENT AND TRAINING
 
 ---
@@ -2976,6 +3342,7 @@ With the model documented, the report proceeds to Chapter 6, which covers the im
 ---
 
 **End of Chapter 5**
+
 # CHAPTER 6: IMPLEMENTATION
 
 ---
@@ -3223,7 +3590,7 @@ def extract_embedding(image: Image.Image, model_name: str) -> np.ndarray:
         "Facenet": "Facenet",
         "ArcFace": "ArcFace"
     }
-    
+  
     deepface_model = model_backend_map.get(model_name, model_name)
 
     embedding = DeepFace.represent(
@@ -3232,7 +3599,7 @@ def extract_embedding(image: Image.Image, model_name: str) -> np.ndarray:
         enforce_detection=False,
         detector_backend="skip"
     )
-    
+  
     if isinstance(embedding, list) and len(embedding) > 0:
         return np.array(embedding[0]["embedding"])
     return np.array(embedding["embedding"])
@@ -3277,29 +3644,29 @@ from typing import List, Dict, Tuple, Optional
 def cosine_similarity(vec1: np.ndarray, vec2: np.ndarray) -> float:
     """
     Compute cosine similarity between two vectors.
-    
+  
     Cosine similarity measures the angle between vectors:
     - 1.0: identical direction (perfect match)
     - 0.0: perpendicular (no similarity)
     - -1.0: opposite direction (complete mismatch)
-    
+  
     Args:
         vec1: First embedding vector
         vec2: Second embedding vector
-        
+    
     Returns:
         Cosine similarity score between -1 and 1
     """
     vec1 = vec1.flatten()
     vec2 = vec2.flatten()
-    
+  
     dot_product = np.dot(vec1, vec2)
     norm1 = np.linalg.norm(vec1)
     norm2 = np.linalg.norm(vec2)
-    
+  
     if norm1 == 0 or norm2 == 0:
         return 0.0
-    
+  
     return float(dot_product / (norm1 * norm2))
 
 def euclidean_distance(vec1: np.ndarray, vec2: np.ndarray) -> float:
@@ -3317,14 +3684,14 @@ def find_best_match(
 ) -> Dict:
     """
     Find best matching user for given embedding.
-    
+  
     Args:
         query_embedding: Face embedding to match
         users: List of enrolled user dictionaries
         model_name: Model name for embedding lookup
         threshold: Similarity threshold for match decision
         metric: Distance metric ("cosine" or "euclidean")
-        
+    
     Returns:
         Dictionary with match result:
         {
@@ -3338,18 +3705,18 @@ def find_best_match(
         "confidence": 0.0,
         "is_match": False
     }
-    
+  
     query_embedding = np.array(query_embedding)
-    
+  
     for user in users:
         embeddings = user.get("embeddings", {})
         stored_embedding = embeddings.get(model_name)
-        
+    
         if stored_embedding is None:
             continue
-        
+    
         stored_vec = np.array(stored_embedding)
-        
+    
         # Handle single vs multiple embeddings
         if isinstance(stored_vec, list):
             if len(stored_vec) > 0 and isinstance(stored_vec[0], list):
@@ -3374,7 +3741,7 @@ def find_best_match(
                 confidence = cosine_similarity(query_embedding, stored_vec)
             else:
                 confidence = -euclidean_distance(query_embedding, stored_vec)
-        
+    
         # Update best match
         if confidence > best_match["confidence"]:
             best_match = {
@@ -3382,7 +3749,7 @@ def find_best_match(
                 "confidence": confidence,
                 "is_match": confidence >= threshold
             }
-    
+  
     return best_match
 
 def compute_similarity_matrix(
@@ -3391,23 +3758,23 @@ def compute_similarity_matrix(
 ) -> np.ndarray:
     """
     Compute similarity matrix between multiple queries and stored embeddings.
-    
+  
     Args:
         query_embeddings: Array of shape (n_queries, embedding_dim)
         stored_embeddings: List of stored embedding arrays
-        
+    
     Returns:
         Similarity matrix of shape (n_queries, n_stored)
     """
     n_queries = len(query_embeddings)
     n_stored = len(stored_embeddings)
-    
+  
     similarity_matrix = np.zeros((n_queries, n_stored))
-    
+  
     for i, query in enumerate(query_embeddings):
         for j, stored in enumerate(stored_embeddings):
             similarity_matrix[i, j] = cosine_similarity(query, stored)
-    
+  
     return similarity_matrix
 ```
 
@@ -3424,11 +3791,11 @@ from typing import Tuple, Optional
 class FaceDetector:
     """
     Face detection using Haar Cascade Classifier.
-    
+  
     Detects faces in images and returns cropped, aligned faces
     suitable for face recognition.
     """
-    
+  
     def __init__(self, 
                  target_size=(224, 224),
                  padding_ratio=0.2,
@@ -3436,85 +3803,85 @@ class FaceDetector:
         self.target_size = target_size
         self.padding_ratio = padding_ratio
         self.min_face_size = min_face_size
-        
+    
         cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         self.face_cascade = cv2.CascadeClassifier(cascade_path)
-        
+    
         if self.face_cascade.empty():
             raise RuntimeError("Failed to load Haar cascade classifier")
-    
+  
     def detect(self, image: np.ndarray) -> Optional[Tuple[int, int, int, int]]:
         """
         Detect face bounding box in image.
-        
+    
         Args:
             image: RGB image as numpy array
-            
+        
         Returns:
             Tuple of (x, y, width, height) or None if no face found
         """
         gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
-        
+    
         faces = self.face_cascade.detectMultiScale(
             gray,
             scaleFactor=1.1,
             minNeighbors=5,
             minSize=(self.min_face_size, self.min_face_size)
         )
-        
+    
         if len(faces) == 0:
             return None
-        
+    
         # Return largest face
         return max(faces, key=lambda f: f[2] * f[3])
-    
+  
     def crop_face(self, image: Image.Image, bbox: Tuple[int, int, int, int]) -> Image.Image:
         """
         Crop and resize detected face.
-        
+    
         Args:
             image: PIL Image
             bbox: Face bounding box (x, y, width, height)
-            
+        
         Returns:
             Cropped and resized face as PIL Image
         """
         x, y, w, h = bbox
-        
+    
         # Add padding
         pad_w = int(w * self.padding_ratio)
         pad_h = int(h * self.padding_ratio)
-        
+    
         x1 = max(0, x - pad_w)
         y1 = max(0, y - pad_h)
         x2 = min(image.width, x + w + pad_w)
         y2 = min(image.height, y + h + pad_h)
-        
+    
         cropped = image.crop((x1, y1, x2, y2))
         resized = cropped.resize(self.target_size, Image.LANCZOS)
-        
-        return resized
     
+        return resized
+  
     def detect_and_crop(self, image: Image.Image) -> Tuple[Optional[Image.Image], bool]:
         """
         Complete detection and cropping pipeline.
-        
+    
         Args:
             image: PIL Image
-            
+        
         Returns:
             Tuple of (cropped_face, detected) where detected indicates success
         """
         try:
             image_array = np.array(image)
             bbox = self.detect(image_array)
-            
+        
             if bbox is None:
                 return None, False
-            
+        
             cropped = self.crop_face(image, bbox)
             return cropped, True
-            
+        
         except Exception as e:
             print(f"Face detection error: {e}")
             return None, False
@@ -3532,10 +3899,10 @@ def get_detector() -> FaceDetector:
 def detect_and_crop_face(image: Image.Image) -> Tuple[Optional[Image.Image], bool]:
     """
     Convenience function for face detection and cropping.
-    
+  
     Args:
         image: PIL Image
-        
+    
     Returns:
         Tuple of (cropped_face, detected)
     """
@@ -3645,11 +4012,11 @@ class FaceRecognitionAPI {
     try {
       const response = await fetch(url, config);
       const data = await response.json();
-      
+  
       if (!response.ok) {
         throw new Error(data.detail || 'API request failed');
       }
-      
+  
       return data;
     } catch (error) {
       console.error(`API Error [${endpoint}]:`, error);
@@ -3667,7 +4034,7 @@ class FaceRecognitionAPI {
     const formData = new FormData();
     formData.append('name', name);
     formData.append('threshold', threshold.toString());
-    
+  
     images.forEach((image, index) => {
       formData.append('files', {
         uri: image.uri,
@@ -3711,12 +4078,12 @@ class FaceRecognitionAPI {
   // Verification History
   async getHistory(filters = {}) {
     const params = new URLSearchParams();
-    
+  
     if (filters.name) params.append('name', filters.name);
     if (filters.model) params.append('model', filters.model);
     if (filters.start_date) params.append('start_date', filters.start_date);
     if (filters.end_date) params.append('end_date', filters.end_date);
-    
+  
     const query = params.toString();
     return this.request(`/history${query ? '?' + query : ''}`);
   }
@@ -3776,15 +4143,15 @@ function RecognitionPage() {
   const captureImage = useCallback(() => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
-    
+  
     if (!video || !canvas) return null;
-    
+  
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    
+  
     const ctx = canvas.getContext('2d');
     ctx.drawImage(video, 0, 0);
-    
+  
     return canvas.toDataURL('image/jpeg');
   }, []);
 
@@ -3792,21 +4159,21 @@ function RecognitionPage() {
     setLoading(true);
     setError(null);
     setResult(null);
-    
+  
     try {
       const imageData = captureImage();
       if (!imageData) {
         throw new Error('No image captured');
       }
-      
+  
       // Convert data URL to File object
       const response = await fetch(imageData);
       const blob = await response.blob();
       const file = new File([blob], 'capture.jpg', { type: 'image/jpeg' });
-      
+  
       const verification = await api.verifyFace(file, model, threshold);
       setResult(verification);
-      
+  
     } catch (err) {
       setError(err.message);
     } finally {
@@ -3817,11 +4184,11 @@ function RecognitionPage() {
   const handleFileUpload = async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
-    
+  
     setLoading(true);
     setError(null);
     setResult(null);
-    
+  
     try {
       const verification = await api.verifyFace(file, model, threshold);
       setResult(verification);
@@ -3835,14 +4202,14 @@ function RecognitionPage() {
   return (
     <div className="recognition-page">
       <h1>Face Verification</h1>
-      
+  
       <div className="controls">
         <select value={model} onChange={(e) => setModel(e.target.value)}>
           <option value="Siamese">Siamese Network</option>
           <option value="Facenet">Facenet</option>
           <option value="ArcFace">ArcFace</option>
         </select>
-        
+    
         <label>
           Threshold: {threshold}
           <input 
@@ -3855,12 +4222,12 @@ function RecognitionPage() {
           />
         </label>
       </div>
-      
+  
       <div className="video-container">
         <video ref={videoRef} autoPlay playsInline muted />
         <canvas ref={canvasRef} style={{ display: 'none' }} />
       </div>
-      
+  
       <div className="actions">
         {!stream ? (
           <button onClick={startCamera}>Start Camera</button>
@@ -3872,9 +4239,9 @@ function RecognitionPage() {
         </button>
         <input type="file" accept="image/*" onChange={handleFileUpload} />
       </div>
-      
+  
       {error && <div className="error">{error}</div>}
-      
+  
       {result && (
         <div className={`result ${result.is_match ? 'match' : 'no-match'}`}>
           <h2>{result.name}</h2>
@@ -3958,20 +4325,20 @@ class FaceRecognitionApp(App):
         self.current_frame = None
         self.selected_model = "Siamese"
         self.threshold = 0.7
-        
+    
         layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
-        
+    
         # Camera preview
         self.img_widget = KivyImage(size_hint_y=0.6)
         layout.add_widget(self.img_widget)
-        
+    
         # Controls
         controls = BoxLayout(size_hint_y=0.3, spacing=5)
-        
+    
         self.capture_btn = Button(text='Capture & Verify', 
                                   on_press=self.verify_face)
         controls.add_widget(self.capture_btn)
-        
+    
         model_selector = BoxLayout(orientation='vertical')
         model_selector.add_widget(Label(text='Model'))
         self.model_btns = {}
@@ -3981,9 +4348,9 @@ class FaceRecognitionApp(App):
             self.model_btns[model] = btn
             model_selector.add_widget(btn)
         controls.add_widget(model_selector)
-        
+    
         layout.add_widget(controls)
-        
+    
         # Threshold slider
         threshold_layout = BoxLayout(size_hint_y=0.1)
         threshold_layout.add_widget(Label(text='Threshold'))
@@ -3992,17 +4359,17 @@ class FaceRecognitionApp(App):
                                         on_touch_move=self.update_threshold)
         threshold_layout.add_widget(self.threshold_slider)
         layout.add_widget(threshold_layout)
-        
+    
         # Result display
         self.result_label = Label(text='Capture an image to verify',
                                   size_hint_y=0.1)
         layout.add_widget(self.result_label)
-        
+    
         # Start camera update
         Clock.schedule_interval(self.update_camera, 1.0 / 30.0)
-        
-        return layout
     
+        return layout
+  
     def update_camera(self, dt):
         ret, frame = self.capture.read()
         if ret:
@@ -4014,40 +4381,40 @@ class FaceRecognitionApp(App):
                                    colorfmt='rgb')
             texture.blit_buffer(buf, colorfmt='rgb', bufferfmt='ubyte')
             self.img_widget.texture = texture
-    
+  
     def select_model(self, model):
         self.selected_model = model
         for m, btn in self.model_btns.items():
             btn.background_color = [0, 1, 0, 1] if m == model else [1, 1, 1, 1]
-    
+  
     def update_threshold(self, instance, value):
         self.threshold = value
-    
+  
     def verify_face(self, instance):
         if self.current_frame is None:
             return
-        
+    
         # Save frame to bytes
         _, buffer = cv2.imencode('.jpg', self.current_frame)
         files = {'file': ('capture.jpg', io.BytesIO(buffer.tobytes()), 'image/jpeg')}
         data = {'model': self.selected_model, 'threshold': str(self.threshold)}
-        
+    
         try:
             response = requests.post(f"{API_URL}/verify", 
                                     files=files, data=data)
             result = response.json()
-            
+        
             if result['is_match']:
                 self.result_label.text = f"Match: {result['name']} ({result['confidence']:.1%})"
                 self.result_label.color = [0, 1, 0, 1]
             else:
                 self.result_label.text = f"Unknown ({result['confidence']:.1%})"
                 self.result_label.color = [1, 0, 0, 1]
-                
+            
         except Exception as e:
             self.result_label.text = f"Error: {str(e)}"
             self.result_label.color = [1, 0, 0, 1]
-    
+  
     def on_stop(self):
         self.capture.release()
 
@@ -4505,13 +4872,13 @@ async def enroll_user(name: str = Form(...), files: List[UploadFile] = File(defa
                           detail="Minimum 3 images required for enrollment")
 
     all_embeddings = {model: [] for model in get_available_models()}
-    
+  
     for file in files:
         image = Image.open(io.BytesIO(await file.read())).convert("RGB")
         face_image, detected = detect_and_crop_face(image)
         if not detected:
             continue
-            
+        
         for model_name in get_available_models():
             embedding = extract_embedding(face_image, model_name)
             all_embeddings[model_name].append(embedding.tolist())
@@ -4525,22 +4892,22 @@ async def verify_face(file: UploadFile = File(...),
                       threshold: float = Form(default=0.7)):
     image = Image.open(io.BytesIO(await file.read())).convert("RGB")
     face_image, detected = detect_and_crop_face(image)
-    
+  
     if not detected:
         raise HTTPException(status_code=400, detail="No face detected")
-    
+  
     embedding = extract_embedding(face_image, model)
     users = load_embeddings().get("users", [])
-    
+  
     best_match = find_best_match(embedding, users, model, threshold)
-    
+  
     result = {
         "name": best_match["name"],
         "confidence": round(best_match["confidence"], 4),
         "is_match": best_match["is_match"],
         "model": model
     }
-    
+  
     add_history_entry(result=result, model=model, 
                       input_method="upload", threshold=threshold)
     return result
@@ -4571,6 +4938,7 @@ With the implementation documented, the report proceeds to Chapter 7, which cove
 ---
 
 **End of Chapter 6**
+
 # CHAPTER 7: TESTING AND EVALUATION
 
 ---
@@ -4652,27 +5020,27 @@ from services.matching import (
 
 class TestCosineSimilarity(unittest.TestCase):
     """Unit tests for cosine similarity computation."""
-    
+  
     def test_identical_vectors(self):
         """Identical vectors should have similarity of 1.0."""
         vec = np.array([1.0, 0.0, 0.0])
         result = cosine_similarity(vec, vec)
         self.assertAlmostEqual(result, 1.0, places=5)
-    
+  
     def test_opposite_vectors(self):
         """Opposite vectors should have similarity of -1.0."""
         vec1 = np.array([1.0, 0.0, 0.0])
         vec2 = np.array([-1.0, 0.0, 0.0])
         result = cosine_similarity(vec1, vec2)
         self.assertAlmostEqual(result, -1.0, places=5)
-    
+  
     def test_perpendicular_vectors(self):
         """Perpendicular vectors should have similarity of 0.0."""
         vec1 = np.array([1.0, 0.0, 0.0])
         vec2 = np.array([0.0, 1.0, 0.0])
         result = cosine_similarity(vec1, vec2)
         self.assertAlmostEqual(result, 0.0, places=5)
-    
+  
     def test_similar_vectors(self):
         """Similar vectors should have high positive similarity."""
         vec1 = np.array([0.9, 0.1, 0.2])
@@ -4680,7 +5048,7 @@ class TestCosineSimilarity(unittest.TestCase):
         result = cosine_similarity(vec1, vec2)
         self.assertGreater(result, 0.99)
         self.assertLess(result, 1.0)
-    
+  
     def test_zero_vector(self):
         """Zero vectors should return 0.0."""
         vec1 = np.array([0.0, 0.0, 0.0])
@@ -4690,20 +5058,20 @@ class TestCosineSimilarity(unittest.TestCase):
 
 class TestEuclideanDistance(unittest.TestCase):
     """Unit tests for Euclidean distance computation."""
-    
+  
     def test_identical_vectors(self):
         """Identical vectors should have distance of 0."""
         vec = np.array([1.0, 2.0, 3.0])
         result = euclidean_distance(vec, vec)
         self.assertEqual(result, 0.0)
-    
+  
     def test_known_distance(self):
         """Test with known distance between vectors."""
         vec1 = np.array([0.0, 0.0])
         vec2 = np.array([3.0, 4.0])
         result = euclidean_distance(vec1, vec2)
         self.assertEqual(result, 5.0)
-    
+  
     def test_symmetry(self):
         """Distance should be symmetric."""
         vec1 = np.array([1.0, 2.0, 3.0])
@@ -4714,11 +5082,11 @@ class TestEuclideanDistance(unittest.TestCase):
 
 class TestFindBestMatch(unittest.TestCase):
     """Unit tests for best match finding."""
-    
+  
     def setUp(self):
         """Set up test fixtures."""
         self.query = np.array([0.9, 0.1, 0.1, 0.1])
-        
+    
         self.users = [
             {
                 "name": "Alice",
@@ -4733,23 +5101,23 @@ class TestFindBestMatch(unittest.TestCase):
                 "embeddings": {"Siamese": [0.85, 0.15, 0.12, 0.08]}
             }
         ]
-    
+  
     def test_finds_best_match(self):
         """Should find user with highest similarity."""
         result = find_best_match(self.query, self.users, "Siamese")
         self.assertEqual(result["name"], "Carol")  # Closest to query
-    
+  
     def test_high_threshold_rejects(self):
         """Should return Unknown when no user exceeds threshold."""
         result = find_best_match(self.query, self.users, "Siamese", threshold=0.99)
         self.assertEqual(result["name"], "Unknown")
         self.assertFalse(result["is_match"])
-    
+  
     def test_model_not_found(self):
         """Should skip users without the specified model."""
         result = find_best_match(self.query, self.users, "NonExistent")
         self.assertEqual(result["name"], "Unknown")
-    
+  
     def test_multiple_embeddings(self):
         """Should handle users with multiple embeddings."""
         users = [
@@ -4806,13 +5174,13 @@ def sample_face_file(sample_face_image):
 
 class TestRootEndpoints:
     """Test root and health endpoints."""
-    
+  
     def test_root_returns_status(self):
         response = client.get("/")
         assert response.status_code == 200
         data = response.json()
         assert "status" in data or "message" in data
-    
+  
     def test_models_endpoint_exists(self):
         response = client.get("/models")
         assert response.status_code == 200
@@ -4822,13 +5190,13 @@ class TestRootEndpoints:
 
 class TestEnrollmentEndpoint:
     """Test user enrollment endpoint."""
-    
+  
     def test_enroll_requires_minimum_images(self):
         """Enrollment should require at least 3 images."""
         response = client.post("/enroll", data={"name": "Test User"})
         assert response.status_code == 400
         assert "3 images" in response.json()["detail"]
-    
+  
     def test_enroll_missing_name(self):
         """Enrollment should require a name."""
         files = [
@@ -4840,18 +5208,18 @@ class TestEnrollmentEndpoint:
 
 class TestVerificationEndpoint:
     """Test face verification endpoint."""
-    
+  
     def test_verify_requires_file(self):
         """Verification should require an image file."""
         response = client.post("/verify", data={"model": "Siamese"})
         assert response.status_code == 422
-    
+  
     def test_verify_invalid_model(self):
         """Verification should validate model name."""
         files = {"file": ("test.jpg", io.BytesIO(b"fake"), "image/jpeg")}
         response = client.post("/verify", data={"model": "InvalidModel"}, files=files)
         assert response.status_code == 422
-    
+  
     @pytest.mark.parametrize("model", ["Siamese", "Facenet", "ArcFace"])
     def test_verify_with_different_models(self, model, sample_face_file):
         """Should accept all valid model names."""
@@ -4865,19 +5233,19 @@ class TestVerificationEndpoint:
 
 class TestHistoryEndpoint:
     """Test verification history endpoint."""
-    
+  
     def test_get_empty_history(self):
         """Should return empty list when no history."""
         response = client.get("/history")
         assert response.status_code == 200
         data = response.json()
         assert isinstance(data, list)
-    
+  
     def test_history_filter_by_model(self):
         """Should filter history by model name."""
         response = client.get("/history?model=Siamese")
         assert response.status_code == 200
-    
+  
     def test_history_filter_by_name(self):
         """Should filter history by user name."""
         response = client.get("/history?name=John")
@@ -4885,14 +5253,14 @@ class TestHistoryEndpoint:
 
 class TestUserManagement:
     """Test user management endpoints."""
-    
+  
     def test_get_users(self):
         """Should return list of users."""
         response = client.get("/users")
         assert response.status_code == 200
         data = response.json()
         assert isinstance(data, list)
-    
+  
     def test_delete_nonexistent_user(self):
         """Should return 404 for nonexistent user."""
         response = client.delete("/user/nonexistent-id-12345")
@@ -4976,6 +5344,38 @@ Tests run against Chrome, Firefox, Safari, and Edge. Each browser receives the s
 Browser-specific quirks are identified and addressed. CSS vendor prefixes and JavaScript polyfills handle known differences.
 
 Mobile browsers are tested on both iOS Safari and Android Chrome. Touch interactions are verified to work correctly.
+
+### 7.4.4 User Interface Screenshots
+
+This section presents screenshots of the system interface demonstrating the testing process and results.
+
+![Figure 7.3: Landing Page](testing-image/landing%20page.png)
+
+*Figure 7.3: The landing page of the face recognition system showing the main navigation and status indicators.*
+
+![Figure 7.4: Enrollment Page](testing-image/face-enroll-page.png)
+
+*Figure 7.4: The enrollment page where users can capture or upload facial images for registration into the system.*
+
+![Figure 7.5: Enrolled Face Confirmation](testing-image/enrolled%20face.png)
+
+*Figure 7.5: Successful enrollment confirmation showing the user has been registered in the system.*
+
+![Figure 7.6: Face Verification Success](testing-image/face%20verified%20(verified).png)
+
+*Figure 7.6: Successful face verification result showing the recognized user with confidence score and processing time.*
+
+![Figure 7.7: Unknown User Verification](testing-image/unknown%20user%20(not%20verified).png)
+
+*Figure 7.7: Verification result for an unregistered user showing the system correctly identifies them as unknown.*
+
+![Figure 7.8: Settings Page](testing-image/settings%20page.png)
+
+*Figure 7.8: The settings page showing available models, enrolled users count, and system configuration options.*
+
+![Figure 7.9: History Page](testing-image/history.png)
+
+*Figure 7.9: The history page displaying verification attempts with timestamps, confidence scores, and model information.*
 
 ---
 
@@ -5156,7 +5556,7 @@ def test_verify_with_model(model):
     files = [("files", ("img.jpg", open("test_images/face.png", "rb"), "image/jpeg")) 
              for _ in range(3)]
     enroll_resp = client.post("/enroll", data={"name": "Test"}, files=files)
-    
+  
     # Then verify
     with open("test_images/face.png", "rb") as f:
         verify_resp = client.post("/verify",
@@ -5174,14 +5574,15 @@ def test_verify_with_model(model):
 
 The following table summarizes test results across all testing categories.
 
-| Test Category | Tests Run | Passed | Failed | Success Rate |
-|---------------|-----------|--------|--------|--------------|
-| Unit Tests | 45 | 45 | 0 | 100% |
-| Integration Tests | 22 | 22 | 0 | 100% |
-| System Tests | 15 | 15 | 0 | 100% |
-| Performance Tests | 8 | 8 | 0 | 100% |
-| Security Tests | 12 | 12 | 0 | 100% |
-| **Total** | **102** | **102** | **0** | **100%** |
+
+| Test Category     | Tests Run | Passed  | Failed | Success Rate |
+| ----------------- | --------- | ------- | ------ | ------------ |
+| Unit Tests        | 45        | 45      | 0      | 100%         |
+| Integration Tests | 22        | 22      | 0      | 100%         |
+| System Tests      | 15        | 15      | 0      | 100%         |
+| Performance Tests | 8         | 8       | 0      | 100%         |
+| Security Tests    | 12        | 12      | 0      | 100%         |
+| **Total**         | **102**   | **102** | **0**  | **100%**     |
 
 All tests passed successfully, indicating that the system meets its functional and non-functional requirements.
 
@@ -5212,6 +5613,7 @@ With testing complete, the report proceeds to Chapter 8, which presents the resu
 ---
 
 **End of Chapter 7**
+
 # CHAPTER 8: RESULTS AND DISCUSSION
 
 ---
@@ -5517,6 +5919,7 @@ With results presented and discussed, the report concludes with Chapter 9, which
 ---
 
 **End of Chapter 8**
+
 # CHAPTER 9: CONCLUSION AND FUTURE WORK
 
 ---
