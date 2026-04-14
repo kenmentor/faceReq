@@ -1,15 +1,16 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { apiClient } from "@/lib/api";
+import { apiClient } from "../../../lib/api";
 
 export default function EnrollPage() {
   const [name, setName] = useState("");
   const [images, setImages] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string; timing?: any } | null>(null);
   const [enrolledCount, setEnrolledCount] = useState<number | null>(null);
   const [showCamera, setShowCamera] = useState(false);
+  const [enrollTiming, setEnrollTiming] = useState<any>(null);
   
   const videoRef = useRef<HTMLVideoElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -144,13 +145,15 @@ console.log("enroll page loaded")
 
     try {
       const files = images.map((img, i) => dataURLtoFile(img, `img_${i}.jpg`));
-      await apiClient.enrollUser(name, files);
-      setMessage({ type: "success", text: `Enrolled ${name} successfully!` });
+      const result = await apiClient.enrollUser(name, files);
+      setEnrollTiming(result.timing);
+      setMessage({ type: "success", text: `Enrolled ${name} successfully!`, timing: result.timing });
       setName("");
       setImages([]);
       loadCount();
     } catch (err: any) {
       setMessage({ type: "error", text: err.response?.data?.detail || "Failed to enroll" });
+      setEnrollTiming(null);
     } finally {
       setIsLoading(false);
     }
@@ -349,14 +352,44 @@ console.log("enroll page loaded")
         />
         
         {message && (
-          <div style={{
-            padding: '10px',
-            background: message.type === 'success' ? 'rgba(0,186,124,0.2)' : 'rgba(244,33,46,0.2)',
-            color: message.type === 'success' ? 'var(--success)' : 'var(--error)',
-            borderRadius: '8px',
-            marginBottom: '12px'
-          }}>
-            {message.text}
+          <div style={{ marginBottom: '12px' }}>
+            <div style={{
+              padding: '10px',
+              background: message.type === 'success' ? 'rgba(0,186,124,0.2)' : 'rgba(244,33,46,0.2)',
+              color: message.type === 'success' ? 'var(--success)' : 'var(--error)',
+              borderRadius: '8px',
+              marginBottom: message.timing ? '8px' : '0'
+            }}>
+              {message.text}
+            </div>
+            {message.timing && (
+              <div style={{
+                padding: '12px',
+                background: 'var(--surface)',
+                borderRadius: '8px',
+                fontSize: '14px'
+              }}>
+                <div style={{ color: 'var(--text-primary)', fontWeight: '600', marginBottom: '8px' }}>Performance</div>
+                <div style={{ display: 'grid', gap: '6px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Total Time</span>
+                    <span style={{ color: 'var(--accent)', fontWeight: '600' }}>{(message.timing.total_ms / 1000).toFixed(3)}s</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Face Detection</span>
+                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.face_detection_total_ms / 1000).toFixed(3)}s</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Embedding</span>
+                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.embedding_extraction_total_ms / 1000).toFixed(3)}s</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Avg per Image</span>
+                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.avg_per_image_ms / 1000).toFixed(3)}s</span>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 

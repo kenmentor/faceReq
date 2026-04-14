@@ -8,6 +8,7 @@ from datetime import datetime
 import numpy as np
 from PIL import Image
 import io
+import time
 
 from services.detection import detect_and_crop_face
 from services.embedding import extract_embedding, get_available_models
@@ -57,6 +58,10 @@ class VerificationResult(BaseModel):
     confidence: float
     is_match: bool
     model: str
+    timing: dict
+    face_detected: bool
+    enrolled_users_count: int
+    threshold_used: float
 
 
 class HistoryEntry(BaseModel):
@@ -109,6 +114,7 @@ async def enroll_user(
     name: str = Form(...),
     files: List[UploadFile] = File(default=[])
 ):
+    total_start = time.time()
     print(f"[DEBUG] enroll_user called with name: {name}, files: {len(files)}")
     
     if len(files) < 3:
@@ -128,8 +134,14 @@ async def enroll_user(
 
     all_embeddings = {model: [] for model in available_models}
     failed_images = []
+    timing_breakdown = {
+        "face_detection_total_ms": 0,
+        "embedding_extraction_total_ms": 0,
+        "per_image_ms": []
+    }
 
     for idx, file in enumerate(files):
+        image_start = time.time()
         print(f"[DEBUG] Processing file {idx + 1}")
         contents = await file.read()
         try:
@@ -140,12 +152,16 @@ async def enroll_user(
             failed_images.append(f"Image {idx + 1}: Invalid file")
             continue
 
+        detection_start = time.time()
         face_image, detected = detect_and_crop_face(image)
+        detection_time = round((time.time() - detection_start) * 1000, 2)
+        timing_breakdown["face_detection_total_ms"] += detection_time
         print(f"[DEBUG] Face detection result: {detected}")
         if not detected:
             failed_images.append(f"Image {idx + 1}: No face detected")
             continue
 
+        embedding_start = time.time()
         for model_name in available_models:
             try:
                 print(f"[DEBUG] Extracting embedding with {model_name}")
@@ -156,6 +172,11 @@ async def enroll_user(
                 all_embeddings[storage_model].append(embedding.tolist())
             except Exception as e:
                 print(f"[DEBUG] Embedding error for {model_name}: {e}")
+        embedding_time = round((time.time() - embedding_start) * 1000, 2)
+        timing_breakdown["embedding_extraction_total_ms"] += embedding_time
+        
+        total_image_time = round((time.time() - image_start) * 1000, 2)
+        timing_breakdown["per_image_ms"].append(total_image_time)
 
     for model_name in available_models:
         if not all_embeddings[model_name]:
@@ -176,6 +197,7 @@ async def enroll_user(
     user_id = add_user(name, all_embeddings)
 
     enrolled_display = ["Siamese" if m == "Facenet" else m for m in all_embeddings.keys()]
+    total_time = round(time.time() - total_start, 4)
 
     return {
         "status": "ok",
@@ -183,7 +205,13 @@ async def enroll_user(
         "name": name,
         "enrolled_with_models": enrolled_display,
         "images_processed": len(files) - len(failed_images),
-        "warnings": failed_images if failed_images else None
+        "warnings": failed_images if failed_images else None,
+        "timing": {
+            "total_ms": total_time,
+            "face_detection_total_ms": round(timing_breakdown["face_detection_total_ms"], 2),
+            "embedding_extraction_total_ms": round(timing_breakdown["embedding_extraction_total_ms"], 2),
+            "avg_per_image_ms": round(sum(timing_breakdown["per_image_ms"]) / len(timing_breakdown["per_image_ms"]) if timing_breakdown["per_image_ms"] else 0, 2)
+        }
     }
 
 
@@ -193,7 +221,7 @@ async def verify_face(
     model: str = Form(...),
     threshold: float = Form(default=0.7)
 ):
-
+    total_start = time.time()
     model = _get_backend_name(model.title())
     contents = await file.read()
 
@@ -202,24 +230,26 @@ async def verify_face(
     except Exception:
         raise HTTPException(status_code=400, detail="Invalid image file")
 
+    detection_start = time.time()
     face_image, face_detected = detect_and_crop_face(image)
+    detection_time = round(time.time() - detection_start, 4)
+
     if not face_detected:
-        raise HTTPException(status_code=400, detail="No face detected in image")
-
-    try:
-        embedding = extract_embedding(face_image, model)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to extract embedding: {str(e)}")
-
-    embeddings_data = load_embeddings()
-    users = embeddings_data.get("users", [])
-
-    if not users:
+        total_time = round(time.time() - total_start, 4)
         result = {
             "name": "Unknown",
             "confidence": 0.0,
             "is_match": False,
-            "model": model
+            "model": model,
+            "timing": {
+                "total_ms": total_time,
+                "face_detection_ms": detection_time,
+                "embedding_extraction_ms": 0,
+                "matching_ms": 0
+            },
+            "face_detected": False,
+            "enrolled_users_count": 0,
+            "threshold_used": threshold
         }
         add_history_entry(
             result=result,
@@ -229,14 +259,45 @@ async def verify_face(
         )
         return result
 
-    best_match = find_best_match(embedding, users, model, threshold)
+    embedding_start = time.time()
+    try:
+        embedding = extract_embedding(face_image, model)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to extract embedding: {str(e)}")
+    embedding_time = round(time.time() - embedding_start, 4)
+
+    embeddings_data = load_embeddings()
+    users = embeddings_data.get("users", [])
+    enrolled_count = len(users)
+
+    matching_start = time.time()
+    if not users:
+        best_match = {
+            "name": "Unknown",
+            "confidence": 0.0,
+            "is_match": False
+        }
+    else:
+        best_match = find_best_match(embedding, users, model, threshold)
+    matching_time = round(time.time() - matching_start, 4)
 
     display_model = "Siamese" if model == "Facenet" else model
+    total_time = round(time.time() - total_start, 4)
+
     result = {
         "name": best_match["name"],
         "confidence": round(best_match["confidence"], 4),
         "is_match": best_match["is_match"],
-        "model": display_model
+        "model": display_model,
+        "timing": {
+            "total_ms": total_time,
+            "face_detection_ms": detection_time,
+            "embedding_extraction_ms": embedding_time,
+            "matching_ms": matching_time
+        },
+        "face_detected": True,
+        "enrolled_users_count": enrolled_count,
+        "threshold_used": threshold
     }
 
     add_history_entry(

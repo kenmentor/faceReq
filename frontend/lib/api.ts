@@ -14,11 +14,35 @@ export interface ModelInfo {
   available: boolean;
 }
 
+export interface TimingInfo {
+  total_ms: number;
+  face_detection_ms?: number;
+  embedding_extraction_ms?: number;
+  matching_ms?: number;
+  face_detection_total_ms?: number;
+  embedding_extraction_total_ms?: number;
+  avg_per_image_ms?: number;
+}
+
 export interface VerificationResult {
   name: string;
   confidence: number;
   is_match: boolean;
   model: string;
+  timing: TimingInfo;
+  face_detected: boolean;
+  enrolled_users_count: number;
+  threshold_used: number;
+}
+
+export interface EnrollResult {
+  status: string;
+  user_id: string;
+  name: string;
+  enrolled_with_models: string[];
+  images_processed: number;
+  warnings?: string[];
+  timing: TimingInfo;
 }
 
 export interface HistoryEntry {
@@ -28,6 +52,10 @@ export interface HistoryEntry {
     name: string;
     confidence: number;
     is_match: boolean;
+    timing?: TimingInfo;
+    face_detected?: boolean;
+    enrolled_users_count?: number;
+    threshold_used?: number;
   };
   model: string;
   input_method: string;
@@ -46,7 +74,7 @@ export const apiClient = {
     return response.data;
   },
 
-  async enrollUser(name: string, images: File[]): Promise<any> {
+  async enrollUser(name: string, images: File[]): Promise<EnrollResult> {
     const formData = new FormData();
     formData.append('name', name);
     images.forEach((image) => {

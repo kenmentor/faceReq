@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { apiClient, ModelInfo, UserInfo } from "@/lib/api";
-import { getSettings, saveSettings } from "@/lib/settings";
+import { apiClient, ModelInfo, UserInfo } from "../../../lib/api";
+import { getSettings, saveSettings } from "../../../lib/settings";
 
 export default function SettingsPage() {
   const [models, setModels] = useState<ModelInfo[]>([]);

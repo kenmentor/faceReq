@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { apiClient, HistoryEntry } from "@/lib/api";
+import { apiClient, HistoryEntry } from "../../../lib/api";
 
 export default function HistoryPage() {
   const [history, setHistory] = useState<HistoryEntry[]>([]);
@@ -139,6 +139,11 @@ export default function HistoryPage() {
                       <span style={{ color: 'var(--text-tertiary)', fontSize: '12px' }}>
                         {entry.model}
                       </span>
+                      {entry.result.timing && (
+                        <span style={{ color: 'var(--accent)', fontSize: '12px' }}>
+                          {(entry.result.timing.total_ms / 1000).toFixed(2)}s
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { apiClient, ModelInfo, VerificationResult } from "@/lib/api";
-import { getSettings, saveSettings } from "@/lib/settings";
+import { apiClient, ModelInfo, VerificationResult } from "../../../lib/api";
+import { getSettings, saveSettings } from "../../../lib/settings";
 
 export default function VerifyPage() {
   const [models, setModels] = useState<ModelInfo[]>([]);
@@ -88,7 +88,52 @@ console.log("fixed")
             <h2 style={{ color: result.is_match ? "var(--success)" : "var(--text-secondary)", fontSize: "28px", fontWeight: "700" }}>
               {result.is_match ? result.name : "Unknown"}
             </h2>
-            <p style={{ color: "var(--text-secondary)", marginTop: "8px" }}>{(result.confidence * 100).toFixed(1)}%</p>
+            <p style={{ color: "var(--text-secondary)", marginTop: "8px" }}>{(result.confidence * 100).toFixed(1)}% confidence</p>
+            
+            <div style={{ marginTop: "20px", background: "var(--surface)", borderRadius: "12px", padding: "16px", textAlign: "left" }}>
+              <h3 style={{ color: "var(--text-primary)", fontSize: "16px", fontWeight: "600", marginBottom: "12px" }}>Details</h3>
+              <div style={{ display: "grid", gap: "8px", fontSize: "14px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Model</span>
+                  <span style={{ color: "var(--text-primary)" }}>{result.model}</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Threshold</span>
+                  <span style={{ color: "var(--text-primary)" }}>{(result.threshold_used * 100).toFixed(0)}%</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Enrolled Users</span>
+                  <span style={{ color: "var(--text-primary)" }}>{result.enrolled_users_count}</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Face Detected</span>
+                  <span style={{ color: result.face_detected ? "var(--success)" : "var(--error)" }}>{result.face_detected ? "Yes" : "No"}</span>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: "16px", background: "var(--surface)", borderRadius: "12px", padding: "16px", textAlign: "left" }}>
+              <h3 style={{ color: "var(--text-primary)", fontSize: "16px", fontWeight: "600", marginBottom: "12px" }}>Performance</h3>
+              <div style={{ display: "grid", gap: "8px", fontSize: "14px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Total Time</span>
+                  <span style={{ color: "var(--accent)", fontWeight: "600" }}>{result.timing.total_ms.toFixed(3)}s</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Face Detection</span>
+                  <span style={{ color: "var(--text-primary)" }}>{(result.timing.face_detection_ms || 0).toFixed(3)}s</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Embedding</span>
+                  <span style={{ color: "var(--text-primary)" }}>{(result.timing.embedding_extraction_ms || 0).toFixed(3)}s</span>
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                  <span style={{ color: "var(--text-secondary)" }}>Matching</span>
+                  <span style={{ color: "var(--text-primary)" }}>{(result.timing.matching_ms || 0).toFixed(3)}s</span>
+                </div>
+              </div>
+            </div>
+
             <button onClick={() => { setResult(null); setPreview(""); setMode("start"); }} style={{ marginTop: 24, background: "white", color: "black", padding: "12px 32px", borderRadius: 24, fontWeight: 600, border: "none", cursor: "pointer" }}>
               Another
             </button>
