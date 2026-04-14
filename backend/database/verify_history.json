@@ -1052,6 +1052,19 @@
       "model": "Siamese",
       "input_method": "upload",
       "threshold": 0.65
+    },
+    {
+      "id": "d70599ed-4063-4108-9925-b22a01ac116d",
+      "timestamp": "2026-04-14T21:18:59.551092",
+      "result": {
+        "name": "mavine ",
+        "confidence": 0.9794,
+        "is_match": true,
+        "model": "Siamese"
+      },
+      "model": "Siamese",
+      "input_method": "upload",
+      "threshold": 0.65
     }
   ]
 }
