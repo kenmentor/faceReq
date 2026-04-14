@@ -17,7 +17,7 @@ export default function VerifyPage() {
   const videoEl = useRef<HTMLVideoElement>(null);
   const mediaStream = useRef<MediaStream | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
-
+console.log("fixed")
   useEffect(() => {
     const s = getSettings();
     setSelectedModel(s.selectedModel);
@@ -120,7 +120,7 @@ export default function VerifyPage() {
                   </button>
                 </>
               )}
-              {mode === "Recognition" && (
+              {mode === "verify" && (
                 <>
                   <button onClick={onVerify} disabled={loading} style={{ flex: 1, background: loading ? "var(--surface)" : "white", color: loading ? "gray" : "black", padding: 14, borderRadius: 999, fontWeight: 600, border: "none", cursor: loading ? "not-allowed" : "pointer" }}>
                     {loading ? "Recognizing..." : "recognize"}

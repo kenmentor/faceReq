@@ -15,7 +15,7 @@ export default function EnrollPage() {
   const streamRef = useRef<MediaStream | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const autoCaptureRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
+console.log("enroll page loaded")
   useEffect(() => {
     loadCount();
     return () => {
