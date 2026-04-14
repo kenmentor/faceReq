@@ -7,7 +7,7 @@ import { getSettings, saveSettings } from "../../../lib/settings";
 export default function SettingsPage() {
   const [models, setModels] = useState<ModelInfo[]>([]);
   const [users, setUsers] = useState<UserInfo[]>([]);
-  const [selectedModel, setSelectedModel] = useState("CustomFaceNet");
+  const [selectedModel, setSelectedModel] = useState("Siamese");
   const [threshold, setThreshold] = useState(0.7);
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
@@ -223,9 +223,9 @@ export default function SettingsPage() {
 
         <div style={{ marginTop: '32px', padding: '16px', background: 'var(--surface)', borderRadius: '12px', border: '1px solid var(--border)' }}>
           <h3 style={{ color: 'var(--text-secondary)', fontSize: '13px', marginBottom: '8px' }}>System</h3>
+          <p style={{ color: 'var(--text-tertiary)', fontSize: '13px' }}>Version: 2.0.0</p>
           <p style={{ color: 'var(--text-tertiary)', fontSize: '13px' }}>API: localhost:8000</p>
-          <p style={{ color: 'var(--text-tertiary)', fontSize: '13px' }}>Detection: MediaPipe</p>
-          <p style={{ color: 'var(--text-tertiary)', fontSize: '13px' }}>Storage: JSON Files</p>
+          <p style={{ color: 'var(--text-tertiary)', fontSize: '13px' }}>Status: Online</p>
         </div>
       </div>
     </div>

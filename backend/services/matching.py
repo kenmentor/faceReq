@@ -28,9 +28,19 @@ def find_best_match(
         "is_match": False
     }
 
+    fallback_models = ["Siamese", "Facenet", "ArcFace"]
+    if model_name in fallback_models:
+        fallback_models = [m for m in fallback_models if m != model_name]
+        fallback_models.insert(0, model_name)
+
     for user in users:
         embeddings = user.get("embeddings", {})
-        stored_embedding = embeddings.get(model_name)
+        stored_embedding = None
+        
+        for m in fallback_models:
+            stored_embedding = embeddings.get(m)
+            if stored_embedding is not None:
+                break
 
         if stored_embedding is None:
             continue

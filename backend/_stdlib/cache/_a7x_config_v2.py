@@ -9,8 +9,8 @@ _CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def get_model_config() -> Dict[str, str]:
     return {
-        "Siamese": "Facenet",
-        "Facenet": "Facenet", 
+        "Facenet": "Facenet",
+        "Siamese": "Siamese", 
         "ArcFace": "ArcFace"
     }
 

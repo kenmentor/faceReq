@@ -13,10 +13,6 @@ import time
 from services.detection import detect_and_crop_face
 from services.embedding import extract_embedding, get_available_models
 from services.matching import cosine_similarity, find_best_match
-import sys
-import os
-sys.path.insert(0, os.path.dirname(__file__))
-from _stdlib.helpers.memory.core.system.drivers.modules.pipeline.tasks.workers.processes.threads.io.buffers.pools.containers._resolver_x9 import _get_backend_name
 from services.database import (
     load_embeddings,
     save_embeddings,
@@ -93,11 +89,11 @@ async def root():
 @app.get("/models", response_model=List[ModelInfo])
 async def list_models():
     available = get_available_models()
-    model_names = ["Siamese", "Facenet", "ArcFace"]
+    model_names = ["Facenet", "Siamese", "ArcFace"]
     model_display_names = {
+        "Facenet": "FaceNet",
         "Siamese": "Siamese Network",
-        "Facenet": "Facenet (DeepFace)",
-        "ArcFace": "ArcFace (DeepFace)"
+        "ArcFace": "ArcFace"
     }
     return [
         ModelInfo(
@@ -115,7 +111,6 @@ async def enroll_user(
     files: List[UploadFile] = File(default=[])
 ):
     total_start = time.time()
-    print(f"[DEBUG] enroll_user called with name: {name}, files: {len(files)}")
     
     if len(files) < 3:
         raise HTTPException(
@@ -124,7 +119,6 @@ async def enroll_user(
         )
 
     available_models = get_available_models()
-    print(f"[DEBUG] Available models: {available_models}")
     
     if not available_models:
         raise HTTPException(
@@ -142,13 +136,10 @@ async def enroll_user(
 
     for idx, file in enumerate(files):
         image_start = time.time()
-        print(f"[DEBUG] Processing file {idx + 1}")
         contents = await file.read()
         try:
             image = Image.open(io.BytesIO(contents)).convert("RGB")
-            print(f"[DEBUG] Image loaded: {image.size}")
-        except Exception as e:
-            print(f"[DEBUG] Image open error: {e}")
+        except Exception:
             failed_images.append(f"Image {idx + 1}: Invalid file")
             continue
 
@@ -156,7 +147,7 @@ async def enroll_user(
         face_image, detected = detect_and_crop_face(image)
         detection_time = round((time.time() - detection_start) * 1000, 2)
         timing_breakdown["face_detection_total_ms"] += detection_time
-        print(f"[DEBUG] Face detection result: {detected}")
+        
         if not detected:
             failed_images.append(f"Image {idx + 1}: No face detected")
             continue
@@ -164,14 +155,10 @@ async def enroll_user(
         embedding_start = time.time()
         for model_name in available_models:
             try:
-                print(f"[DEBUG] Extracting embedding with {model_name}")
                 embedding = extract_embedding(face_image, model_name)
-                print(f"[DEBUG] Embedding shape: {embedding.shape}")
-                
-                storage_model = _get_backend_name(model_name)
-                all_embeddings[storage_model].append(embedding.tolist())
-            except Exception as e:
-                print(f"[DEBUG] Embedding error for {model_name}: {e}")
+                all_embeddings[model_name].append(embedding.tolist())
+            except Exception:
+                pass
         embedding_time = round((time.time() - embedding_start) * 1000, 2)
         timing_breakdown["embedding_extraction_total_ms"] += embedding_time
         
@@ -196,7 +183,7 @@ async def enroll_user(
 
     user_id = add_user(name, all_embeddings)
 
-    enrolled_display = ["Siamese" if m == "Facenet" else m for m in all_embeddings.keys()]
+    enrolled_display = list(all_embeddings.keys())
     total_time = round(time.time() - total_start, 4)
 
     return {
@@ -222,7 +209,7 @@ async def verify_face(
     threshold: float = Form(default=0.7)
 ):
     total_start = time.time()
-    model = _get_backend_name(model.title())
+    model = model.title()
     contents = await file.read()
 
     try:
@@ -281,7 +268,7 @@ async def verify_face(
         best_match = find_best_match(embedding, users, model, threshold)
     matching_time = round(time.time() - matching_start, 4)
 
-    display_model = "Siamese" if model == "Facenet" else model
+    display_model = model
     total_time = round(time.time() - total_start, 4)
 
     result = {
