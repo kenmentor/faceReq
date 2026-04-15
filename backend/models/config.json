@@ -1,0 +1,12 @@
+{
+    "version": "2.0",
+    "runtime": {
+        "facenet": "Facenet",
+        "arcface": "ArcFace"
+    },
+    "checksum": "pending",
+    "metadata": {
+        "description": "Model runtime bindings configuration",
+        "last_updated": "2024-01-15"
+    }
+}

@@ -16,7 +16,8 @@ from services.matching import cosine_similarity, find_best_match
 import sys
 import os
 sys.path.insert(0, os.path.dirname(__file__))
-from _stdlib.helpers.memory.core.system.drivers.modules.pipeline.tasks.workers.processes.threads.io.buffers.pools.containers._resolver_x9 import _get_backend_name
+
+from services.embedding import resolve_name as resolve_model_name
 from services.database import (
     load_embeddings,
     save_embeddings,
@@ -93,11 +94,12 @@ async def root():
 @app.get("/models", response_model=List[ModelInfo])
 async def list_models():
     available = get_available_models()
-    model_names = ["Facenet", "Siamese", "ArcFace"]
+    model_names = ["Facenet", "Siamese", "ArcFace", "MobileNet"]
     model_display_names = {
         "Facenet": "FaceNet",
         "Siamese": "Siamese Network",
-        "ArcFace": "ArcFace"
+        "ArcFace": "ArcFace",
+        "MobileNet": "MobileNet"
     }
     return [
         ModelInfo(
@@ -160,7 +162,7 @@ async def enroll_user(
         for model_name in available_models:
             try:
                 embedding = extract_embedding(face_image, model_name)
-                storage_key = _get_backend_name(model_name)
+                storage_key = resolve_model_name(model_name)
                 if storage_key not in all_embeddings:
                     all_embeddings[storage_key] = []
                 all_embeddings[storage_key].append(embedding.tolist())
@@ -265,7 +267,7 @@ async def verify_face(
     enrolled_count = len(users)
 
     matching_start = time.time()
-    lookup_model = _get_backend_name(model)
+    lookup_model = resolve_model_name(model)
     if not users:
         best_match = {
             "name": "Unknown",

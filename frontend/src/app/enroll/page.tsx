@@ -362,34 +362,7 @@ console.log("enroll page loaded")
             }}>
               {message.text}
             </div>
-            {message.timing && (
-              <div style={{
-                padding: '12px',
-                background: 'var(--surface)',
-                borderRadius: '8px',
-                fontSize: '14px'
-              }}>
-                <div style={{ color: 'var(--text-primary)', fontWeight: '600', marginBottom: '8px' }}>Performance</div>
-                <div style={{ display: 'grid', gap: '6px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: 'var(--text-secondary)' }}>Total Time</span>
-                    <span style={{ color: 'var(--accent)', fontWeight: '600' }}>{(message.timing.total_ms / 1000).toFixed(3)}s</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: 'var(--text-secondary)' }}>Face Detection</span>
-                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.face_detection_total_ms / 1000).toFixed(3)}s</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: 'var(--text-secondary)' }}>Embedding</span>
-                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.embedding_extraction_total_ms / 1000).toFixed(3)}s</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: 'var(--text-secondary)' }}>Avg per Image</span>
-                    <span style={{ color: 'var(--text-primary)' }}>{(message.timing.avg_per_image_ms / 1000).toFixed(3)}s</span>
-                  </div>
-                </div>
-              </div>
-            )}
+            
           </div>
         )}
 
@@ -409,6 +382,7 @@ console.log("enroll page loaded")
         >
           {isLoading ? 'Enrolling...' : 'Enroll User'}
         </button>
+        
       </form>
 
       {enrolledCount !== null && (
