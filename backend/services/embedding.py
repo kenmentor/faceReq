@@ -138,7 +138,6 @@ def _normalize(embedding: np.ndarray) -> np.ndarray:
     
     return embedding
 
-
 def _is_valid(embedding: np.ndarray) -> bool:
     """
     Validate that an embedding vector is usable.

@@ -11,7 +11,6 @@ export default function EnrollPage() {
   const [enrolledCount, setEnrolledCount] = useState<number | null>(null);
   const [showCamera, setShowCamera] = useState(false);
   const [enrollTiming, setEnrollTiming] = useState<any>(null);
-  
   const videoRef = useRef<HTMLVideoElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
